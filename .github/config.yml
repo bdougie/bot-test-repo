@@ -1,0 +1,27 @@
+gdp:
+  mentions:
+    - github/ecosystem-api-internals
+    - github/docs-platform
+    - github/developer-relations
+    - mcolyer
+    - xhermann
+  date: 27
+  issueBody: >
+    It's that time of the month again for our monthly GDP emails!
+    This issue rock and rolls!!! Use this [template](https://docs.google.com/document/d/1CFwUioPQImDAZ40_R2uvY0KGyqZW04QUwyVI0rcqEZc/edit?usp=sharing)
+
+rebase:
+  mentions:
+    - leereilly
+    - rubymorillo
+    - johndbritton
+    - DEGoodmanWilson
+    - bdougie
+    - github/marketing-content
+  date: 20
+  issueBody: >
+    It's that time of the month again for our monthly GDP emails!
+    This issue rock and rolls!!! Use this [template](https://docs.google.com/document/d/15UzJrXcnl4jCd-rBOjEbQHdzTQdYxgo1H2D8EtX94mI/edit)
+    to get started.
+    Checklist:
+    - [ ] I got all the API announcement from x Team
