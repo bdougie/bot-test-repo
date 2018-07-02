@@ -1,7 +1,7 @@
 gdp:
   mentions:
-    - @bdougie
-    - @hiimbex
+    - "@bdougie"
+    - "@hiimbex"
   date: 27
   issueBody: >
     It's that time of the month again for our monthly GDP emails!
@@ -9,8 +9,8 @@ gdp:
 
 rebase:
   mentions:
-    - @bdougie
-    - @hiimbex
+    - "@bdougie"
+    - "@hiimbex"
   date: 20
   issueBody: >
     It's that time of the month again for our monthly GDP emails!
