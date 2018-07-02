@@ -2,13 +2,13 @@ gdp:
   mentions:
     - "@bdougie"
     - "@hiimbex"
-  date: 2
+  date: 5
   issueBody: >
     It's that time of the month again for our monthly GDP emails!
     This issue rock and rolls!!! Use this [template](https://docs.google.com/document/d/1CFwUioPQImDAZ40_R2uvY0KGyqZW04QUwyVI0rcqEZc/edit?usp=sharing)
   lastCall: >
     Last call to make updates to the Newsletter before it is sent to content for review.
-  lastCallDate: 5
+  lastCallDate: 2
 rebase:
   mentions:
     - "@bdougie"
