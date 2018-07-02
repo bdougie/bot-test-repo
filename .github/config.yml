@@ -1,10 +1,7 @@
 gdp:
   mentions:
-    - github/ecosystem-api-internals
-    - github/docs-platform
-    - github/developer-relations
-    - mcolyer
-    - xhermann
+    - @bdougie
+    - @hiimbex
   date: 27
   issueBody: >
     It's that time of the month again for our monthly GDP emails!
@@ -12,12 +9,8 @@ gdp:
 
 rebase:
   mentions:
-    - leereilly
-    - rubymorillo
-    - johndbritton
-    - DEGoodmanWilson
-    - bdougie
-    - github/marketing-content
+    - @bdougie
+    - @hiimbex
   date: 20
   issueBody: >
     It's that time of the month again for our monthly GDP emails!
