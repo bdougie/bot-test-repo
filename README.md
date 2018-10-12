@@ -25,7 +25,7 @@ As this starter is used for my (german) tutorials on my [blog](https://www.lekoa
 Current features:
 
 - Gatsby v2.0.0
-- Articles in Markdown
+- Articles in Markdownvbvvbvb
 - Styled Components 💅
 - Netlify Contact Form
 - Categories
