@@ -30,7 +30,7 @@ Current features:
 - Netlify Contact Form
 - Categories
 - Offline Support
-- WebApp Manifest Support
+- WebApp Manifest Supportsdaf
 - Typography.js
 - SEO
     - Sitemap
