@@ -20,7 +20,7 @@ Check out the [Gatsby Starter Portfolio Overview](https://gatsby-starter-portfol
 
 ## Features
 
-As this starter is used for my (german) tutorials on my [blog](https://www.lekoarts.de/blog) the features are subject to change. I'll add more features or replace some with other features in the process.
+As this starter is used for my (german) tutorials on my [frewblog](https://www.lekoarts.de/blog) the features are subject to change. I'll add more features or replace some with other features in the process.
 
 Current features:
 
