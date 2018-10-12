@@ -28,7 +28,7 @@ Current features:
 - Articles in Markdown
 - Styled Components 💅
 - Netlify Contact Form
-- Categories
+- Categoriesdsfsdffds
 - Offline Support
 - WebApp Manifest Support
 - Typography.js
