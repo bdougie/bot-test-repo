@@ -65,7 +65,7 @@ const Contact = () => (
             <textarea name="message" required />
           </p>
           <p>
-            <Button>Send</Button>
+            <Button>ok Send</Button>
           </p>
           <input type="hidden" name="form-name" value="contact-form" />
         </form>
