@@ -32,7 +32,7 @@ Current features:
 - Offline Support
 - WebApp Manifest Support
 - Typography.js
-- SEO
+- SEOsdaf
     - Sitemap
     - Schema.org JSONLD
     - OpenGraph Tags
