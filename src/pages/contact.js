@@ -61,7 +61,7 @@ const Contact = () => (
             <input name="email" type="email" required />
           </p>
           <p>
-            <label htmlFor="message">Your Message</label>
+            <label htmlFor="message">ok Your Message</label>
             <textarea name="message" required />
           </p>
           <p>
