@@ -1,6 +1,6 @@
 # Gatsby Starter: Minimal Blog
 
-Big typography, focus on the content and minimal style.
+Big typography, focus on content and minimal style.
 
 [Demo Website](https://minimal-blog.netlify.com/)
 
