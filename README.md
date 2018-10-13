@@ -27,7 +27,7 @@ Current features:
 - Gatsby v2.0.0
 - Articles in Markdown
 - Styled Components 💅
-- Netlify Contact Form
+- Netlify Contactsdfdsd Form
 - Categories
 - Offline Support
 - WebApp Manifest Support
