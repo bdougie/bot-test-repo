@@ -18,7 +18,7 @@ Also check out the other *gatsby-starters*:
 
 Check out the [Gatsby Starter Portfolio Overview](https://gatsby-starter-portfolio.netlify.com/)!
 
-## Features
+## Featuresvcx
 
 As this starter is used for my (german) tutorials on my [blog](https://www.lekoarts.de/blog) the features are subject to change. I'll add more features or replace some with other features in the process.
 
