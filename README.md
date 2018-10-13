@@ -1,4 +1,4 @@
-# Gatsby Starter: Minimal Blog
+# Gatsby Starter: Minimal Blogfd
 
 Big typography, focus on the content & minimal style.
 
