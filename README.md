@@ -13,7 +13,7 @@ I hope you like my starters and create something awesome! To see some of my work
 Also check out the other *gatsby-starters*:
 - [gatsby-starter-portfolio-emma](https://github.com/LeKoArts/gatsby-starter-portfolio-emma)
 - [gatsby-starter-portfolio-emilia](https://github.com/LeKoArts/gatsby-starter-portfolio-emilia)
-- [gatsby-starter-portfolio-bella](https://github.com/LeKoArts/gatsby-starter-portfolio-bella)
+- [gatsby-starter-portfolio-bella](https://github.com/LsdfdffeKoArts/gatsby-starter-portfolio-bella)
 - [gatsby-starter-portfolio-cara](https://github.com/LeKoArts/gatsby-starter-portfolio-cara)
 
 Check out the [Gatsby Starter Portfolio Overview](https://gatsby-starter-portfolio.netlify.com/)!
