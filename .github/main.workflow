@@ -1,11 +1,11 @@
 workflow "contributor-validator" {
   resolves = ["Contributor Validator"]
-  on = "pull_request_review_comment"
+  on = "issues"
 }
 
 workflow "pin issue based on label" {
-  on = "issues"
   resolves = ["pin an issue"]
+  on = "issues"
 }
 
 action "Contributor Validator" {
