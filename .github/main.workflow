@@ -1,5 +1,5 @@
 workflow "Contributor Validator" {
-  resolves = ["contributor validator"]
+  resolves = ["contributor-validator"]
   on = "issues"
 }
 
