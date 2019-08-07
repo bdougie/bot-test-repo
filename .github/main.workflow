@@ -1,9 +1,9 @@
 workflow "contributor-validator" {
   on = "pull_request"
-  resolves = ["Contributor Validator"]
+  resolves = ["contributor-validator"]
 }
 
- action "Contributor Validator" {
+ action "contributor-validator" {
   uses = "bdougie/contributor-validator@master"
   secrets = [
     "GITHUB_TOKEN"  
