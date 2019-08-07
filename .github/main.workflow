@@ -1,6 +1,6 @@
 workflow "contributor-validator" {
-  on = "pull_request"
   resolves = ["Contributor Validator"]
+  on = "pull_request_review_comment"
 }
 
 workflow "pin issue based on label" {
@@ -11,16 +11,16 @@ workflow "pin issue based on label" {
 action "Contributor Validator" {
   uses = "bdougie/bdougie/contribution-validation@master"
   secrets = [
-    "GITHUB_TOKEN"  
+    "GITHUB_TOKEN",
   ]
 }
 
 action "pin an issue" {
   uses = "bdougie/issue-pin-by-label@master"
   secrets = [
-    "GITHUB_TOKEN"  
-  ],
+    "GITHUB_TOKEN",
+  ]
   env = {
-    LABEL_NAME  = "top5"
+    LABEL_NAME = "top5"
   }
 }
