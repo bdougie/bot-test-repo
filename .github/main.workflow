@@ -9,7 +9,7 @@ workflow "pin issue based on label" {
 }
 
 action "Contributor Validator" {
-  uses = "bdougie/bdougie/contribution-validation@master"
+  uses = "bdougie/bdougie/contribution-validation2@master"
   secrets = [
     "GITHUB_TOKEN",
   ]
