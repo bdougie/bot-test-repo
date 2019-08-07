@@ -4,7 +4,7 @@ workflow "contributor-validator" {
 }
 
 action "Contributor Validator" {
-  uses = "bdougie/contributor-validator@master"
+  uses = "bdougie/bdougie/contribution-validation@master"
   secrets = [
     "GITHUB_TOKEN"  
   ]
