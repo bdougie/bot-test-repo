@@ -1,5 +1,5 @@
-workflow "contributor-validator" {
-  resolves = ["Contributor Validator"]
+workflow "Contributor Validator" {
+  resolves = ["contributor validator"]
   on = "issues"
 }
 
@@ -8,8 +8,8 @@ workflow "pin issue based on label" {
   on = "issues"
 }
 
-action "Contributor Validator" {
-  uses = "bdougie/bdougie/contribution-validation2@master"
+action "contributor-validator" {
+  uses = "bdougie/contribution-validation2@master"
   secrets = [
     "GITHUB_TOKEN",
   ]
