@@ -4,7 +4,7 @@ workflow "contributor-validator" {
 }
 
 action "contributor validator" {
-  uses = "bdougie/contributor-validator@master"
+  uses = "bdougie/airtable-record-creator@master"
   secrets = [
     "GITHUB_TOKEN",
   ]
