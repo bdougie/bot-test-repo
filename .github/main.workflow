@@ -8,5 +8,6 @@ action "contributor validator" {
   secrets = [
     "GITHUB_TOKEN",
     "AIRTABLE_TOKEN",
+    "AIRTABLE_BASE",
   ]
 }
