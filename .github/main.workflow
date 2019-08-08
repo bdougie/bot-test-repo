@@ -1,6 +1,6 @@
 workflow "contributor-validator" {
   resolves = ["contributor validator"]
-  on = "pull_request"
+  on = "issues"
 }
 
 action "contributor validator" {
