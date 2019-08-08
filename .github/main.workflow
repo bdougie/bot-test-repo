@@ -7,5 +7,6 @@ action "contributor validator" {
   uses = "bdougie/airtable-record-creator@master"
   secrets = [
     "GITHUB_TOKEN",
+    "AIRTABLE_TOKEN",
   ]
 }
