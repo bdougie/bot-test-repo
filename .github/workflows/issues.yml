@@ -11,4 +11,3 @@ jobs:
       env:
         AIRTABLE_BASE: ${{ secrets.AIRTABLE_BASE }}
         AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
