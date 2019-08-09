@@ -1,0 +1,14 @@
+on: issues
+name: contributor-validator
+jobs:
+  contributorValidator:
+    name: contributor validator
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: contributor validator
+      uses: bdougie/airtable-record-creator@master
+      env:
+        AIRTABLE_BASE: ${{ secrets.AIRTABLE_BASE }}
+        AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
