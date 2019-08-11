@@ -2,7 +2,7 @@ on: issues
 name: contributor-validator
 jobs:
   contributorValidator:
-    name: IRL
+    name: contributor-validator
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
