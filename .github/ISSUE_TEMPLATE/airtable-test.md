@@ -1,21 +1,15 @@
 ---
-name: airtable test
-about: testing bdougie/airtable-record-creator
-title: test airtable
+name: test issue
+about: testing actions
+title: test actions
 labels: ''
 assignees: ''
 
 ---
+<!--#
+NOUN=mother
+ATTRIBUTION=Mark Wahlberg
+$-->
 
-```
-Event Name: RailsConf
-Start Date: 30 May 2019
-End Date: 31 May 2019
-Location: Minneaplois, MN
-```
-<!--
----------------------------------------------------
-DO NOT DELETE - Please complete the above
----------------------------------------------------
-This is needed to get parsed by the IRL automation
--->
+"Say hi to your {{ NOUN }} for me," {{ ATTRIBUTION }}
+
