@@ -13,10 +13,10 @@ _Provide a high level description of the GitHub event, and goals and expected ou
 
 ### Event Details
 ```
-Event Name: _Example Conf_
-Start Date: _DD Month YYYY_
-End Date: _DD Month YYYY_
-Location: _City, Country_
+Event Name: SAMPLE
+Start Date: 10 October 2019
+End Date: 11 October 2019
+Location: Oakland, CA
 ```
 <!--
 ---------------------------------------------------
