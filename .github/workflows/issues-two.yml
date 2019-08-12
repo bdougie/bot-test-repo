@@ -7,7 +7,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: airtable work
-      uses: bdougie/_delete_@master
+      uses: bdougie/deleted@master
       env:
         AIRTABLE_BASE: ${{ secrets.AIRTABLE_BASE }}
         AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}
