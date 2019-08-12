@@ -10,4 +10,4 @@ jobs:
       uses: bdougie/deleted@master
       env:
         AIRTABLE_BASE: ${{ secrets.AIRTABLE_BASE }}
-        AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_TOKEN }}
+        AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_KEY }}
