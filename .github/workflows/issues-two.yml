@@ -10,4 +10,4 @@ jobs:
       uses: bdougie/airtable-record-creator@master
       env:
         AIRTABLE_BASE: ${{ secrets.AIRTABLE_BASE }}
-        AIRTABLE_TOKEN: ${{ secrets.AIRTABLE_KEY }}
+        AIRTABLE_KEY: ${{ secrets.AIRTABLE_KEY }}
