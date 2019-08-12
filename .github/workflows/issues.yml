@@ -1,10 +1,10 @@
-on: issues
-name: contributor-validator
-jobs:
-  contributorValidator:
-    name: contributor-validator
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - name: variables in markdwon
-      uses: bdougie/variables-in-markdown@master
+# on: issues
+# name: contributor-validator
+# jobs:
+#   contributorValidator:
+#     name: contributor-validator
+#     runs-on: ubuntu-latest
+#     steps:
+#     - uses: actions/checkout@master
+#     - name: variables in markdwon
+#       uses: bdougie/variables-in-markdown@master
