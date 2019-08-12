@@ -1,13 +1,13 @@
-on: issues
-name: airtable-work
-jobs:
-  airtableWork:
-    name: airtable work
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - name: airtable work
-      uses: bdougie/airtable-record-creator@master
-      env:
-        AIRTABLE_BASE: ${{ secrets.AIRTABLE_BASE }}
-        AIRTABLE_KEY: ${{ secrets.AIRTABLE_KEY }}
+# on: issues
+# name: airtable-work
+# jobs:
+#   airtableWork:
+#     name: airtable work
+#     runs-on: ubuntu-latest
+#     steps:
+#     - uses: actions/checkout@master
+#     - name: airtable work
+#       uses: bdougie/airtable-record-creator@master
+#       env:
+#         AIRTABLE_BASE: ${{ secrets.AIRTABLE_BASE }}
+#         AIRTABLE_KEY: ${{ secrets.AIRTABLE_KEY }}
