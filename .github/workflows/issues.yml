@@ -6,8 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: variables in markdwon
-      uses: bdougie/variables-in-markdown@master
+    - uses: bdougie/variables-in-markdown@master
       with:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
