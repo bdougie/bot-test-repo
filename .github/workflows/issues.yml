@@ -9,5 +9,5 @@ jobs:
     - name: variables in markdwon
       uses: bdougie/variables-in-markdown@master
       with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
