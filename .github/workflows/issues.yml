@@ -8,3 +8,6 @@ jobs:
     - uses: actions/checkout@master
     - name: variables in markdwon
       uses: bdougie/variables-in-markdown@master
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+
