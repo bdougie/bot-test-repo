@@ -7,6 +7,6 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - uses: bdougie/variables-in-markdown@master
-      with:
+      env:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
