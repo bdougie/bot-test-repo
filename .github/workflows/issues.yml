@@ -3,7 +3,6 @@ name: Marky Markdown
 jobs:
   markdown:
     name: markdown-marker
-#     if: github.event.action == 'opened'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
