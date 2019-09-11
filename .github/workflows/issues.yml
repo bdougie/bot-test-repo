@@ -12,4 +12,5 @@ jobs:
     hello:
       name: hello-world
       needs: markdown
-      run: echo "hello"
+      run: |
+        echo "hello"
