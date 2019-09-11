@@ -1,9 +1,12 @@
 on: issues
 name: Marky Markdown
 jobs:
-  hello:
-    name: hello-world
+  markdown:
+  - name: markdown-marker
+    if: github.event.action == 'opened'
     runs-on: ubuntu-latest
-    needs: markdown
-    run: |
-      echo "hello world"
+    steps:
+    - uses: actions/checkout@master
+    - uses: bdougie/variables-in-markdown@v0.1.4
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
