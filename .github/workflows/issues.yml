@@ -10,6 +10,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: hello-world
-    needs: markdown
-    run: |
-      npx cowsay
+      needs: markdown
+      run: |
+        npx cowsay
