@@ -6,6 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: bdougie/variables-in-markdown@master
+    - uses: bdougie/variables-in-markdown@v0.1.4
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
