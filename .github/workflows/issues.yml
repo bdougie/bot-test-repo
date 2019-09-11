@@ -13,4 +13,4 @@ jobs:
       name: hello-world
       needs: markdown
       run: |
-        npx cowsay hello
+        npx cowsay "hello"
