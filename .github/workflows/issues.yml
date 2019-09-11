@@ -8,4 +8,4 @@ jobs:
     - uses: actions/checkout@master
     - uses: bdougie/variables-in-markdown@master
       env:
-        GITHUB_TOKEN: ${{ secrets.POST_TWO_GITHUB }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
