@@ -9,6 +9,5 @@ jobs:
     - uses: bdougie/variables-in-markdown@v0.1.4
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        github: ${{ secrets.GITHUB_EVENT }}
     - run: |
       echo ${GITHUB_EVENT_NAME}
