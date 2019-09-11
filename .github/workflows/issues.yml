@@ -9,8 +9,7 @@ jobs:
     - uses: bdougie/variables-in-markdown@v.0.1.4
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  hello:
-    name: hello-world
+    - name: hello-world
     needs: markdown
     run: |
       npx cowsay
