@@ -9,5 +9,8 @@ jobs:
     - uses: bdougie/variables-in-markdown@v.0.1.4
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - run: |
-      echo "hello"
+  hello:
+    name: hello-world
+    needs: markdown
+    run: |
+      npx cowsay
