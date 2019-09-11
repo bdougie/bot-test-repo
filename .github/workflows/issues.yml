@@ -13,4 +13,4 @@ jobs:
       name: hello-world
       needs: markdown
       run: |
-        echo "hello"
+        npx cowsay hello
