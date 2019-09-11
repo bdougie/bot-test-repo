@@ -11,4 +11,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: hello-world
       run: |
-        npx cowsay
+        echo "hello"
