@@ -1,8 +1,10 @@
 on: issues
+  types: [labeled]
 name: pin issue based on label
 jobs:
   pinAnIssue:
     name: pin an issue
+    if: github.e == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
