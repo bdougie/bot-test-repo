@@ -1,6 +1,6 @@
 on:
   schedule:
-  - cron: 23 * * * 1
+  - cron: 35 * * * 1
 name: Weekly Issue Closure
 jobs:
   cycle-weekly-close:
@@ -8,6 +8,6 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: weekly-issue-closure
-      uses: .bdougie/close-issues-based-on-label@master
+      uses: bdougie/close-issues-based-on-label@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
