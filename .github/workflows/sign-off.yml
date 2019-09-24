@@ -1,0 +1,17 @@
+on: push
+name: A workflow for my commits in the GitHub UI
+jobs:
+  build:
+    name: Hello world action
+    runs-on: ubuntu-latest # useful environment to we can run a simple bash    
+    steps:
+    - name: hello-world
+      run: |
+        git config --global user.name ${GITHUB_ACTOR}
+        git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+        git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+        
+        git add .
+        git commit --amend --no-edit --signoff
+
+        git push -u origin ${GITHUB_HEAD_REF}
