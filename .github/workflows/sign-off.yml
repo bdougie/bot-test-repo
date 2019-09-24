@@ -1,7 +1,7 @@
 name: Sign off commits in UI
 
 on:
-  pull_request:
+  push:
     paths:
     - '*.md'
 
