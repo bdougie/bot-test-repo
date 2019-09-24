@@ -1,13 +1,13 @@
 name: Sign off commits in UI
 
 on:
-  push:
+  pull_request:
     paths:
     - '*.md'
 
 jobs:
   sign-off-commit:
-    name: sign
+    name: signing commit
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
