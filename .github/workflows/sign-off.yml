@@ -24,4 +24,4 @@ jobs:
         
         git add .
         git commit --amend --no-edit --signoff
-        git push -u origin ${GITHUB_HEAD_REF}
+        git push -u origin ${GITHUB_HEAD_REF} -f
