@@ -3,7 +3,7 @@ name: Standard
 on:
   pull_request:
     paths:
-    - '*.js'
+    - '*.md'
 
 jobs:
   lint:
