@@ -1,7 +1,7 @@
 name: Sign off commits in UI
 
 on:
-  push:
+  pull_request:
     paths:
     - '*.md'
 
@@ -22,3 +22,4 @@ jobs:
         git add .
         git commit --amend --no-edit --signoff
         git push -u origin ${GITHUB_HEAD_REF} -f
+        
