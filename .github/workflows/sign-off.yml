@@ -17,13 +17,10 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        touch bar.js
-        # exit if there are no changes to commit
-        [[ `git status --porcelain` ]] || exit
-        git checkout "${GITHUB_HEAD_REF}"
-        git config --global user.name "github-actions"
-        git config --global user.email "github-actions@users.noreply.github.com"
+        git config --global user.name ${GITHUB_ACTOR}
+        git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
         git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+        
         git add .
-        git commit -am "lint!"
+        git commit --amend --no-edit --signoff
         git push -u origin ${GITHUB_HEAD_REF}
