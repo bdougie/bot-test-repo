@@ -1,22 +1,18 @@
 
 require 'octokit'
 
-NWO = ENV["GITHUB_REPOSITORY"]
 user = ENV["GITHUB ACTOR"]
+org = "github-craftwork"
+team_id = 3414353
 
 client = Octokit::Client.new(:access_token => ENV["GITHUB_TOKEN"])
-# client.auto_paginate = true
 
-# open_issues = client.list_issues(NWO, { :labels => "available" })
+puts "-------------------------------------"
+puts "ACTOR: #{user}"
 
-# open_issues.each do |issue|
-#   client.close_issue(NWO, issue.number)
-# end
+puts client.organization_member?(org, user)
+puts "-------------------------------------"
 
-print "-------------------------------------"
-print client.organization_member?("github-craftwork", user)
-print "-------------------------------------"
-
-if !client.organization_member?("github-craftwork", user)
-  client.add_team_membership("github-craftwork", user)
+if !client.organization_member?(org, user)
+  client.add_team_membership(3414353, user)
 end
