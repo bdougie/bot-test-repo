@@ -1,19 +1,29 @@
-on: push
-name: A workflow for my commits in the GitHub UI
+name: Standard
+
+on:
+  pull_request:
+    paths:
+    - '*.js'
+
 jobs:
-  build:
-    name: Hello world action
-    runs-on: ubuntu-latest # useful environment to we can run a simple bash    
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
     steps:
-    - name: hello-world
-      run: |         
+    - uses: actions/checkout@master
+    - name: npm ci
+      run: npm ci
+    - name: lint and push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        npm run lint
+        # exit if there are no changes to commit
+        [[ `git status --porcelain` ]] || exit
         git checkout "${GITHUB_HEAD_REF}"
-
-        git config --global user.name ${GITHUB_ACTOR}
-        git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@users.noreply.github.com"
         git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-        
         git add .
-        git commit --amend --no-edit --signoff
-
+        git commit -am "lint!"
         git push -u origin ${GITHUB_HEAD_REF}
