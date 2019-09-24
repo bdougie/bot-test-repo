@@ -13,5 +13,5 @@ open_issues.each do |issue|
 end
 
 print "-------------------------------------"
-print client.organization_member?(ENV["GITHUB ACTOR"])
+print client.organization_member?("github-actor", "ENV["GITHUB ACTOR"])
 print "-------------------------------------"
