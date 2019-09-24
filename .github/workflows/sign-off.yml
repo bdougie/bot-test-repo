@@ -3,7 +3,7 @@ name: Standard
 on:
   pull_request:
     paths:
-    - '*.js'
+    - 'foo.js'
 
 jobs:
   lint:
@@ -19,7 +19,6 @@ jobs:
       run: |
         npx standard --fix
         # exit if there are no changes to commit
-        [[ `git status --porcelain` ]] || exit
         git checkout "${GITHUB_HEAD_REF}"
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@users.noreply.github.com"
