@@ -10,6 +10,7 @@ jobs:
     name: sign
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@master
     - name: Sign the last commit 
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
