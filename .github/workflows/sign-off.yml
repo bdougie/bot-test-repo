@@ -1,4 +1,4 @@
-name: Sign Off commits in UI
+name: Sign off commits in UI
 
 on:
   push:
@@ -10,10 +10,7 @@ jobs:
     name: sign
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: npm ci
-      run: npm ci
-    - name: lint and push
+    - name: Sign the last commit 
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
