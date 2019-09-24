@@ -1,6 +1,6 @@
 on:
   schedule:
-  - cron: 0 * * * 3
+  - cron: 15 * * * 2
 name: Weekly Meeting
 jobs:
   cycle-weekly-meeting:
