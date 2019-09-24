@@ -1,13 +1,13 @@
-name: Standard
+name: Sign Off commits in UI
 
 on:
-  pull_request:
+  push:
     paths:
     - '*.md'
 
 jobs:
-  lint:
-    name: lint
+  sign-off-commit:
+    name: sign
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
