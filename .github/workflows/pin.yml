@@ -11,7 +11,6 @@ jobs:
       run: echo ${{ github.actor }}
     - name: pin an issue
       uses: bdougie/issue-pin-by-label@master
-      if: github.actor == 'github-actions'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         LABEL_NAME: top5
