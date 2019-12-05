@@ -1,7 +1,7 @@
 name: "Label Top 5"
 on:
   issues:
-    types: [opened]
+    types: [opened, reopened]
 
 jobs:
   test:
