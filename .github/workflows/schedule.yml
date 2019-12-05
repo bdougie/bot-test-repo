@@ -1,6 +1,6 @@
 on:
   schedule: 
-  - cron: 9 * * * *	
+  - cron: 11 * * * *	
 name: Weekly Meeting
 jobs:
   createAnIssue:
