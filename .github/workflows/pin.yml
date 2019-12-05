@@ -12,5 +12,5 @@ jobs:
     - name: pin an issue
       uses: bdougie/issue-pin-by-label@master
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.POST_TWO_GITHUB }}
         LABEL_NAME: top5
