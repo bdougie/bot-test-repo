@@ -1,4 +1,5 @@
-on: push
+on:
+  issues: [labeled]
 name: Weekly Meeting
 jobs:
   createAnIssue:
@@ -12,3 +13,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         args: .github/ISSUE_TEMPLATE/TOP5.md
+    - uses: Naturalclar/issue-action@v1.0.0
+        with:
+          keywords: '["test"]'
+          assignees: '["username"]'
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
