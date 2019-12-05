@@ -1,4 +1,6 @@
-on: push
+on: 
+  schedule:
+    - cron: 30 ****
 name: Weekly Meeting
 jobs:
   createAnIssue:
