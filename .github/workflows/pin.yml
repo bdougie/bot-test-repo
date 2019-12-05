@@ -7,6 +7,8 @@ jobs:
     name: pin an issue
     runs-on: ubuntu-latest
     steps:
+    - name: Just print the actor
+      run: echo github.actor
     - name: pin an issue
       uses: bdougie/issue-pin-by-label@master
       if: github.actor == 'github-actions'
