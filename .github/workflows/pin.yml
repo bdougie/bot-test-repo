@@ -1,6 +1,6 @@
 on: 
   issues:
-    types: [labeled]
+    types: [labeled, unlabeled]
 name: pin issue based on label
 jobs:
   pinAnIssue:
