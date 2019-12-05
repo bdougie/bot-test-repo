@@ -1,6 +1,6 @@
 on:
-  issue_comment:
-    types: [created, edited]
+  schedule: 
+  - cron: 5 * * * *	
 name: Weekly Meeting
 jobs:
   cycle-weekly-meeting:
