@@ -12,8 +12,3 @@ jobs:
           keywords: '["Top 5"]'
           labels: '["top5"]'
           github-token: "${{ secrets.GITHUB_TOKEN }}"
-      - name: pin an issue
-        uses: bdougie/issue-pin-by-label@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          LABEL_NAME: top5
