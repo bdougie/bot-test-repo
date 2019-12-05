@@ -1,13 +1,16 @@
 on:
   schedule: 
-  - cron: 5 * * * *	
+  - cron: 9 * * * *	
 name: Weekly Meeting
 jobs:
-  cycle-weekly-meeting:
+  createAnIssue:
+    name: Create an issue
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: cycle-weekly-meeting
-      uses: ./action
+    - name: Create an issue
+      uses: bdougie/create-an-issue@e43b083ea71e22e77a81ffb4a55dacb2addb71ed
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        args: .github/ISSUE_TEMPLATE/TOP5.md
