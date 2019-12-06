@@ -1,0 +1,13 @@
+on: push
+name: Publish stories if changed
+jobs:
+  checkChangesInStories:
+    if: github.repository	== 'bdougie/open-sauced'
+    name: Check changes in stories
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Check changes in stories
+      uses: open-sauced/diff-includes@master
+      with:
+        args: docs
