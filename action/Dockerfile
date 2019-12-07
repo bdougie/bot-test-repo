@@ -1,13 +1,6 @@
-FROM ruby:2.5
+FROM alpine:latest
 
-RUN bundle config --global frozen 1
+RUN apk add --update git jq && rm -rf /var/cache/apk/*
 
-WORKDIR /usr/src/app
-
-COPY Gemfile Gemfile.lock ./
-RUN bundle install
-
-COPY . .
-
-CMD ["ruby", "./action/run.rb"]
-#CMD ["ls"]
+COPY entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
