@@ -3,7 +3,7 @@
 # shellcheck disable=SC2046 disable=SC2048 disable=SC2086
 git log 
 
-if git diff-index --quiet HEAD~$(jq '.commits | length' "${GITHUB_EVENT_PATH}") -- $*; then
+if ! git diff-index --quiet HEAD~$(jq '.commits | length' "${GITHUB_EVENT_PATH}") -- $*; then
   echo "Changes in $*, proceeding"
 else
   echo "No changes in $*, stopping" && echo "ignore:$*" >> "$HOME/ignore"
