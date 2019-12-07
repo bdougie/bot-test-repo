@@ -5,7 +5,6 @@ jobs:
     name: Check changes in stories
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
     - run: |
         git status
         git diff-index --quiet HEAD~$(jq '.commits | length' "${GITHUB_EVENT_PATH}") -- $*
