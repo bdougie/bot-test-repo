@@ -5,6 +5,7 @@ if ! git diff-index --quiet HEAD~$(jq '.commits | length' "${GITHUB_EVENT_PATH}"
   echo $?
   echo "Changes in $*, proceeding"
 else
+  echo $?
   echo "No changes in $*, stopping" && echo "ignore:$*" >> "$HOME/ignore"
   return 1
 fi
