@@ -9,4 +9,4 @@ jobs:
     - name: Check changes in stories
       uses: ./action
       with:
-        args: docs
+        args: src
