@@ -7,6 +7,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - run: |
+        git commit --allow-empty -m "Trigger notification"
         git diff --name-only HEAD~$(jq '.commits | length' "${GITHUB_EVENT_PATH}") -- $*
     - name: Check changes in stories
       uses: ./action
