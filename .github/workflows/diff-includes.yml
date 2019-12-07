@@ -6,6 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v1
     - name: Check changes in stories
       uses: ./action
       with:
