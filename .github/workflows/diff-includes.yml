@@ -8,6 +8,8 @@ jobs:
     - uses: actions/checkout@master
     - run: |
         git status
+        git diff-index $GITHUB_SHA -- $*
+
         git diff-index HEAD~$(jq '.commits | length' "${GITHUB_EVENT_PATH}") -- $*
     - name: Check changes in stories
       uses: ./action
