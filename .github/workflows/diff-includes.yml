@@ -1,25 +1,13 @@
-on: push
+on: 
+  push:
+    paths: "src/**"
 name: Publish stories if changed
 jobs:
   checkChangesInStories:
     name: Check changes in stories
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - run: git diff-index --quiet HEAD~$(jq '.commits | length' "${GITHUB_EVENT_PATH}") -- $*
-    - run: |
-        git config --global user.email "github-actions@users.noreply.github.com"
-        git config --global user.name "GitHub Actions"
-        git commit --allow-empty -m "Send blank commit"
-        if ! git diff-index --quiet HEAD~$(jq '.commits | length' "${GITHUB_EVENT_PATH}") -- $*; then
-            echo "Changes in $*, proceeding"
-            echo "::set-output name=base::true"
-        else
-            echo "No changes in $*, stopping" && echo "ignore:$*"
-            echo "::set-output name=base::false"
-        fi
-    - name: Check changes in stories
-      if: steps.base_check.outputs.base == 'true'
+    - name: Ship changes in stories
       uses: ./action
       with:
         args: src
