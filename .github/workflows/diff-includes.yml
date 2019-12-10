@@ -11,7 +11,7 @@ jobs:
         git config --global user.name "GitHub Actions"
         git commit --allow-empty -m "Send blank commit"
         git diff-index --quiet HEAD~$(jq '.commits | length' "${GITHUB_EVENT_PATH}") -- $* >> "$HOME/ignore"
-        echo $HOME/ignore
+        cat $HOME/ignore
         if ! git diff-index --quiet HEAD~$(jq '.commits | length' "${GITHUB_EVENT_PATH}") -- $*; then
             echo "Changes in $*, proceeding"
             echo "::set-output name=base::true"
