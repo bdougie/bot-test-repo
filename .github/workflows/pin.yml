@@ -7,8 +7,8 @@ jobs:
     name: pin an issue
     runs-on: ubuntu-latest
     steps:
-    - name: Just print the actor
-      run: echo ${{ github.actor }}
+    - name: Just print the object
+      run: echo ${{ github.issues }}
     - name: pin an issue
       uses: bdougie/issue-pin-by-label@master
       env:
