@@ -8,7 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Just print the object
-      run: echo $github
+      run: echo $FOO
+      env:
+        FOO: ${{ github }}
     - name: pin an issue
       uses: bdougie/issue-pin-by-label@master
       env:
