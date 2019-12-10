@@ -7,6 +7,7 @@ jobs:
     name: Check changes in stories
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v1
     - name: Ship changes in stories
       uses: ./action
       with:
