@@ -7,4 +7,4 @@ jobs:
     steps:
       - name:
         run: |
-            grep -q "notBougie" data/banned.txt; [ $? -eq 0 ] && echo "yes" || echo "no"
+            grep -q "notBdougie" data/banned.txt; [ $? -eq 0 ] && echo "yes" || echo "no"
