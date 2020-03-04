@@ -1,5 +1,1 @@
-list = [
-  "notBdougie"
-];
-
-module.exports = list;
+notBdougie
