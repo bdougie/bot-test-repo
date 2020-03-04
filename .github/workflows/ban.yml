@@ -5,6 +5,13 @@ jobs:
   one:
     runs-on: ubuntu-latest
     steps:
+      - name: Read package.json
+        id: package
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: ./banned.tx
+      - name: Echo package.json
+        run: echo ${{ steps.package.outputs.content }}
       - name: ban this man
         run: |
-            grep -q "notBdougie" data/banned.txt; [ $? -eq 0 ] && echo "yes" || echo "no"
+           echo "no"
