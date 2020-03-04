@@ -9,12 +9,15 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const result = await github.repos.getContents({
+            github.repos.getContents({
               owner: "bdougie",
               repo: "bot-test-repo",
               path: "banned.txt",
             })
-            console.log(result)
+            .then(r => {
+              const content = Buffer.from(r.data.content, 'base64').toString().toLowerCase()
+              console.log(content.includes("notbdougie"))
+            });
 #       - name: Read package.json
 #         id: package
 #         uses: juliangruber/read-file-action@v1
