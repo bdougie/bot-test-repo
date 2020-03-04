@@ -5,13 +5,12 @@ jobs:
   one:
     runs-on: ubuntu-latest
     steps:
-      - name: Read package.json
-        id: package
-        uses: juliangruber/read-file-action@v1
-        with:
-          path: ./package.json
-      - name: Echo package.json
-        run: echo ${{ steps.package.outputs.content }}
+#       - name: Read package.json
+#         id: package
+#         uses: juliangruber/read-file-action@v1
+#         with:
+#           path: ./package.json
+#       - name: Echo package.json
+#         run: echo ${{ steps.package.outputs.content }}
       - name: ban this man
-        run: |
-           echo "no"
+        run: echo .
