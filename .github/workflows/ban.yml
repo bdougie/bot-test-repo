@@ -5,6 +5,16 @@ jobs:
   one:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/github-script@0.8.0
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const result = await github.repos.getContents({
+              owner: "bdougie",
+              repo: "bot-test-repo",
+              path: "banned.txt",
+            })
+            console.log(result)
 #       - name: Read package.json
 #         id: package
 #         uses: juliangruber/read-file-action@v1
