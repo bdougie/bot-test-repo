@@ -5,6 +5,6 @@ jobs:
   one:
     runs-on: ubuntu-latest
     steps:
-      - name:
+      - name: ban this man
         run: |
             grep -q "notBdougie" data/banned.txt; [ $? -eq 0 ] && echo "yes" || echo "no"
