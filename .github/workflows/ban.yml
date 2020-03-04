@@ -13,4 +13,4 @@ jobs:
 #       - name: Echo package.json
 #         run: echo ${{ steps.package.outputs.content }}
       - name: ban this man
-        run: echo ${{ GITHUB_EVENT_PATH	}}
+        run: echo $GITHUB_EVENT_PATH
