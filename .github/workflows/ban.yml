@@ -1,0 +1,10 @@
+name: Assign
+on: push
+
+jobs:
+  one:
+    runs-on: ubuntu-latest
+    steps:
+      - name:
+        run: |
+            grep -q "notBoudie" data/banned.txt; [ $? -eq 0 ] && echo "yes" || echo "no"
