@@ -9,7 +9,7 @@ jobs:
         id: package
         uses: juliangruber/read-file-action@v1
         with:
-          path: ./banned.tx
+          path: ./banned.txt
       - name: Echo package.json
         run: echo ${{ steps.package.outputs.content }}
       - name: ban this man
