@@ -1,4 +1,4 @@
-name: Assign
+name: Ban
 on: push
 
 jobs:
