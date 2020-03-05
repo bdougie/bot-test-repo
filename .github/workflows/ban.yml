@@ -20,7 +20,7 @@ jobs:
             github.issues.createComment({
               owner: "bdougie",
               repo: "bot-test-repo",
-              issue_number: data.pull_request.number,
+              issue_number: github.event.pull_request.number,
               body: "Submission is not a GitHub Action"
             });
 #       - name: Read package.json
