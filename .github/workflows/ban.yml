@@ -1,5 +1,7 @@
 name: Ban
-on: push
+on: 
+  issues: 
+    type: [labeled]
 
 jobs:
   one:
