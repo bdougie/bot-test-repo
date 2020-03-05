@@ -1,4 +1,5 @@
-name: Ban
+name: test
+
 on:
   pull_request:
     branches:
@@ -6,22 +7,30 @@ on:
     types: [labeled]
 
 jobs:
-  one:
+  build:
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/github-script@0.8.0
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            github.repos.getContents({
-              owner: "bdougie",
-              repo: "bot-test-repo",
-              path: "banned.txt",
-            })
-            .then(r => {
-              const content = Buffer.from(r.data.content, 'base64').toString().toLowerCase()
-              console.log(content.includes("notbdougie"))
-            });
+    - name: current branch
+      run: |
+        array = ${{ github.event.pull_request.labels }}
+        echo "${array[*]}"
+#   one:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/github-script@0.8.0
+#         with:
+#           github-token: ${{secrets.GITHUB_TOKEN}}
+#           script: |
+#             github.repos.getContents({
+#               owner: "bdougie",
+#               repo: "bot-test-repo",
+#               path: "banned.txt",
+#             })
+#             .then(r => {
+#               const content = Buffer.from(r.data.content, 'base64').toString().toLowerCase()
+#               console.log(content.includes("notbdougie"))
+#             });
 #       - name: Read package.json
 #         id: package
 #         uses: juliangruber/read-file-action@v1
@@ -29,5 +38,5 @@ jobs:
 #           path: ./package.json
 #       - name: Echo package.json
 #         run: echo ${{ steps.package.outputs.content }}
-      - name: ban this man
-        run: echo $GITHUB_EVENT_PATH
+#       - name: ban this man
+#        run: echo $GITHUB_EVENT_PATH
