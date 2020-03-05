@@ -13,22 +13,16 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
-#   one:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/github-script@0.8.0
-#         with:
-#           github-token: ${{secrets.GITHUB_TOKEN}}
-#           script: |
-#             github.repos.getContents({
-#               owner: "bdougie",
-#               repo: "bot-test-repo",
-#               path: "banned.txt",
-#             })
-#             .then(r => {
-#               const content = Buffer.from(r.data.content, 'base64').toString().toLowerCase()
-#               console.log(content.includes("notbdougie"))
-#             });
+      - uses: actions/github-script@0.8.0
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            github.octokit.issues.createComment({
+              owner: "bdougie",
+              repo: "bot-test-repo",
+              issue_number: data.pull_request.number,
+              body: "Submission is not a GitHub Action"
+            });
 #       - name: Read package.json
 #         id: package
 #         uses: juliangruber/read-file-action@v1
