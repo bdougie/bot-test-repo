@@ -17,7 +17,7 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            github.octokit.issues.createComment({
+            github.issues.createComment({
               owner: "bdougie",
               repo: "bot-test-repo",
               issue_number: data.pull_request.number,
