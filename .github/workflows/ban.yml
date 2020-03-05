@@ -26,3 +26,10 @@ jobs:
               issue_number: context.payload.number,
               body: "Submission is not a usable GitHub Action"
             });
+            
+            github.pulls.update({
+              owner: "bdougie",
+              repo: "bot-test-repo",
+              pull_number: context.payload.number,
+              state: "closed"
+            });
