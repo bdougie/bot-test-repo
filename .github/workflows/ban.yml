@@ -25,7 +25,7 @@ jobs:
               owner: "bdougie",
               repo: "bot-test-repo",
               issue_number: github.number,
-              body: "Submission is not a GitHub Action"
+              body: "Submission is not a usable GitHub Action"
             });
 #       - name: Read package.json
 #         id: package
