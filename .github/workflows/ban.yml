@@ -9,17 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
-      - uses: actions/github-script@0.8.0
+#       - name: Dump GitHub context
+#         env:
+#           GITHUB_CONTEXT: ${{ toJson(github) }}
+#         run: echo "$GITHUB_CONTEXT"
+      - uses: comment on the PR
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            console.log(github.number)
             console.log(github.label.name)
-            
             
             github.issues.createComment({
               owner: "bdougie",
@@ -27,12 +25,4 @@ jobs:
               issue_number: github.number,
               body: "Submission is not a usable GitHub Action"
             });
-#       - name: Read package.json
-#         id: package
-#         uses: juliangruber/read-file-action@v1
-#         with:
-#           path: ./package.json
-#       - name: Echo package.json
-#         run: echo ${{ steps.package.outputs.content }}
-#       - name: ban this man
-#        run: echo $GITHUB_EVENT_PATH
+
