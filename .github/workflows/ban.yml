@@ -21,10 +21,12 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
+            console.log(github)
+            
             github.issues.createComment({
               owner: "bdougie",
               repo: "bot-test-repo",
-              issue_number: github.event.pull_request.number,
+              issue_number: 410,
               body: "Submission is not a GitHub Action"
             });
 #       - name: Read package.json
