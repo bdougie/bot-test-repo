@@ -13,20 +13,18 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
-      - name: Dump GitHub event
-        env:
-          GITHUB_EVENT: ${{ toJson(github.event) }}
-        run: echo "$GITHUB_EVENT"
       - uses: actions/github-script@0.8.0
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            console.log(github)
+            console.log(github.number)
+            console.log(github.label.name)
+            
             
             github.issues.createComment({
               owner: "bdougie",
               repo: "bot-test-repo",
-              issue_number: 410,
+              issue_number: github.number,
               body: "Submission is not a GitHub Action"
             });
 #       - name: Read package.json
