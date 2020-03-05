@@ -9,15 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-#       - name: Dump GitHub context
-#         env:
-#           GITHUB_CONTEXT: ${{ toJson(github) }}
-#         run: echo "$GITHUB_CONTEXT"
-      - uses: comment on the PR
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+      - uses: actions/github-script@0.8.0
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             console.log(github.label.name)
+            
             
             github.issues.createComment({
               owner: "bdougie",
@@ -25,4 +26,3 @@ jobs:
               issue_number: github.number,
               body: "Submission is not a usable GitHub Action"
             });
-
