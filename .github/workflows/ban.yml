@@ -1,7 +1,9 @@
 name: Ban
-on: 
-  issues: 
-    type: [labeled]
+on:
+  pull_request:
+    branches:
+      - master
+    types: [labeled]
 
 jobs:
   one:
