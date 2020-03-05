@@ -17,11 +17,11 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            console.log(github)            
+            console.log(context)            
             
             github.issues.createComment({
               owner: "bdougie",
               repo: "bot-test-repo",
-              issue_number: github.number,
+              issue_number: context.number,
               body: "Submission is not a usable GitHub Action"
             });
