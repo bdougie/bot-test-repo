@@ -1,0 +1,15 @@
+on: schedule
+
+jobs:
+  forkbacon:
+    runs-on: ubuntu-latest
+    steps:
+    - name: forkbacon
+    - uses: actions/checkout@v2
+    - uses: shitiomatic/forkbacon@master # Prefer using tagged version
+      with:
+        upstream_url: "URL for upstream repo. This must be HTTP" # Required! Upstream https clone URL
+        upstream_branch: "master"   # Upstream Branch to use
+        branch: "master"   # Local Branch
+        method: "rebase"   # Method to use. Can be `merge`, `merge-ff-only` or `rebase`.
+        args: "--no-push"  # Additional Arguments to pass to the container
