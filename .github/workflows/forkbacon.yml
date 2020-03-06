@@ -1,4 +1,9 @@
-on: schedule
+name: Fork Bacon
+
+on: 
+  schedule:
+  - cron: "0 2 * * 1-5"
+
 
 jobs:
   forkbacon:
@@ -8,7 +13,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: shitiomatic/forkbacon@master # Prefer using tagged version
       with:
-        upstream_url: "URL for upstream repo. This must be HTTP" # Required! Upstream https clone URL
+        upstream_url: "https://github.com/bdougie/bot-test-repo" # Required! Upstream https clone URL
         upstream_branch: "master"   # Upstream Branch to use
         branch: "master"   # Local Branch
         method: "rebase"   # Method to use. Can be `merge`, `merge-ff-only` or `rebase`.
