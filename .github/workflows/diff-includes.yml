@@ -1,6 +1,5 @@
-on: 
-  push:
-    paths: "src/**"
+on: push
+
 name: Publish stories if changed
 jobs:
   checkChangesInStories:
@@ -8,7 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Ship changes in stories
-      uses: ./action
-      with:
-        args: src
+    - uses: Jitender46559/python-code-review@master
