@@ -1,0 +1,22 @@
+name: ruthere
+
+on:
+  pull_request:
+    types: [labeled]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+      - uses: actions/github-script@0.8.0
+        if: github.event.label.name == 'nocode' || github.event.label.name == 'not-an-action'
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            console.log(context.payload)            
+       
