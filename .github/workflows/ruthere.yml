@@ -1,7 +1,7 @@
 name: R U THERE
 
 on:
-  pull_request:
+  issues:
     types: [labeled]
 
 jobs:
