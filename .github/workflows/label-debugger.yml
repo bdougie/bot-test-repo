@@ -11,4 +11,4 @@ jobs:
       - uses: actions/github-script@0.8.0
         with:
           script: |
-            console.log(github.issues)
+            console.log(github.issues.list())
