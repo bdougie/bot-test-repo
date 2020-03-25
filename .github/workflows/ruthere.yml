@@ -1,5 +1,5 @@
-name: R U THERE
-
+  
+name: Label Test
 on:
   issues:
     types: [labeled]
