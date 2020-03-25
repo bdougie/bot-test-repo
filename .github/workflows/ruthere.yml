@@ -1,8 +1,8 @@
   
-name: Label Test
+name: Schedule Test
 on: 
   schedule: 
-    - cron: "48 * * * *"
+    - cron: "52 * * * *"
 
 jobs:
   build:
