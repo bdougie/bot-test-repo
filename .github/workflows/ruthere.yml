@@ -1,8 +1,8 @@
   
 name: Label Test
-on:
-  issues:
-    types: [labeled]
+on: 
+  schedule: 
+    - cron: "48 * * * *"
 
 jobs:
   build:
