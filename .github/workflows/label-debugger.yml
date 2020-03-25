@@ -9,6 +9,8 @@ jobs:
     
     steps:
       - uses: actions/github-script@0.8.0
+        env: 
+          GITHUB_TOKEN: ${{ secrets.BDOUGIE_TOKEN }}
         with:
           script: |
             console.log(github.issues.list())
