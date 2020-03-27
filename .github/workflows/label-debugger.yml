@@ -1,7 +1,7 @@
 name: Label Test
 on:
   issues:
-    types: [labeled]
+    types: [labeled, unlabeled]
 
 jobs:
   build:
