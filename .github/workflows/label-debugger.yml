@@ -12,5 +12,5 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const res = await github.issues.listForRepo({owner: "bdougie", repo: "bot-test-repo"}))
+            const res = await github.issues.listForRepo({owner: "bdougie", repo: "bot-test-repo"})
             console.log(res)
