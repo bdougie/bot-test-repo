@@ -21,14 +21,13 @@ jobs:
             )
             
             res.data.forEach((x) => {
-              const y = await octokit.issues.listEvents({
+              octokit.issues.listEvents({
                 owner,
                 repo,
                 x.number
-              });
-              
-              console.log(y)
-            
+              }).then((event) => console.log(event))
+              .catch((error) => console.log("ERROR: " + error));
+                          
               // await github.issues.createComment({
                 // issue_number: x.number,
                 // owner: context.repo.owner,
