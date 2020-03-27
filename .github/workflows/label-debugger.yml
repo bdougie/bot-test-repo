@@ -12,4 +12,4 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            console.log(github.issues.listForRepo())
+            console.log(github.issues.listForRepo({owner: "bdougie", repo: "bot-test-repo"}))
