@@ -14,9 +14,26 @@ jobs:
           script: |
             const res = await github.issues.listForRepo(
               {
-                owner: "bdougie",
-                repo: "bot-test-repo",
+                owner: context.repo.owner,
+                repo: context.repo.repo,
                 assignee: "*"
               }
             )
-            console.log(res)
+            
+            res.data.forEach((x) => {
+              const y = await octokit.issues.listEvents({
+                owner,
+                repo,
+                x.number
+              });
+              
+              console.log(y)
+            
+              // await github.issues.createComment({
+                // issue_number: x.number,
+                // owner: context.repo.owner,
+                // repo: context.repo.repo,
+                // body: 'Hey, you gonna eat this?'
+              // })
+
+            }
