@@ -7,9 +7,9 @@ jobs:
     name: resize image
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v2
     - name: Image Resizer Action
-      uses: sharadcodes/img-resizer@v2
+      uses: sharadcodes/img-resizer@v1.0
       with:
         image-folder: 'my_images' # This is a Required field & this folder has original images
         new-resolution: '400x200' # This is Required field
