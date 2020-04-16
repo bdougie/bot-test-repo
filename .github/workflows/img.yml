@@ -14,4 +14,10 @@ jobs:
         image-folder: 'my_images' # This is a Required field & this folder has original images
         new-resolution: '400x200' # This is Required field
         output-folder: "my_resized_images" # This is Required field & this folder will be used to store resized images
-        
+    - name: Add & Commit files
+      run: |
+        git config --local user.email "github-action[bot]@github.com"
+        git config --local user.name "GitHub Action Bot"
+        git add .
+        git commit -m "Add changes" -a
+        git push -f -q https://${{ secrets.GITHUB_TOKEN }}@github.com/your-github-username/YOUR-REPO-NAME.git maste    
