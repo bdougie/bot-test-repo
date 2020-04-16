@@ -4,7 +4,7 @@ on: push
 
 jobs:
   resize-images:
-    name: signing commit
+    name: resize image
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
