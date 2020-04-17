@@ -11,9 +11,9 @@ jobs:
     - name: Image Resizer Action
       uses: sharadcodes/img-resizer@v1.0
       with:
-        image-folder: 'my_images' # This is a Required field & this folder has original images
+        image-folder: 'topics/*/' # This is a Required field & this folder has original images
         new-resolution: '288x288' # This is Required field
-        output-folder: "my_images" # This is Required field & this folder will be used to store resized images
+        output-folder: "topics/*/" # This is Required field & this folder will be used to store resized images
     - name: Add & Commit files
       run: |
         git config --local user.email "github-action[bot]@github.com"
