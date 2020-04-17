@@ -1,6 +1,12 @@
 name: Resize images
 
-on: push
+on: 
+  push:
+    paths:
+      - 'topics/**/**.png'
+  pull_request:
+    paths:
+      - 'topics/**/**.png'
 
 jobs:
   resize-images:
@@ -8,12 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Image Resizer Action
-      uses: sharadcodes/img-resizer@v1.0
-      with:
-        image-folder: 'topics/*/' # This is a Required field & this folder has original images
-        new-resolution: '288x288' # This is Required field
-        output-folder: "topics/*/" # This is Required field & this folder will be used to store resized images
+    - name: Image Resizer to 288x288
+    - uses: docker://continuumio/anaconda3:2019.07
+      run: convert explore.png -resize 288x288 explore.png
     - name: Add & Commit files
       run: |
         git config --local user.email "github-action[bot]@github.com"
