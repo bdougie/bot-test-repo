@@ -23,4 +23,4 @@ jobs:
         git config --local user.name "GitHub Action Bot"
         git add .
         git commit -m "Add changes" -a
-        git push -f -q https://${{ secrets.GITHUB_TOKEN }}@github.com/bdougie/bot-test-repo.git $GITHUB_REF    
+        git push -f -q https://${{ secrets.GITHUB_TOKEN }}@github.com/bdougie/bot-test-repo.git
