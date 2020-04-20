@@ -12,11 +12,11 @@ jobs:
   resize-images:
     name: resize image
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v2
     - name: Image Resizer to 288x288
-    - uses: docker://continuumio/anaconda3:2019.07
-      run: convert explore.png -resize 288x288 explore.png
+    - run: convert explore.png -resize 288x288 explore.png
     - name: Add & Commit files
       run: |
         git config --local user.email "github-action[bot]@github.com"
