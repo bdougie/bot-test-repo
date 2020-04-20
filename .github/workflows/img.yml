@@ -11,18 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
     - run: echo $GITHUB_HEAD_REF
     - name: Image Resizer to 288x288
       run: convert topics/**/**.png -resize 288x288 topics/**/**.png
     - name: Add & Commit files
       run: |
-        git checkout "${GITHUB_HEAD_REF}"
+        git checkout $GITHUB_HEAD_REF
 
         git config --local user.email "github-action[bot]@github.com"
         git config --local user.name "GitHub Action Bot"
         git add .
         git commit -m "Add changes" -a
         
-        git push -u origin ${GITHUB_HEAD_REF} -f
+        git push -u origin $GITHUB_HEAD_REF -f
 
