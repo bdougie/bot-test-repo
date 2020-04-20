@@ -16,11 +16,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Image Resizer to 288x288
-      run: convert topics/**/explore.png -resize 288x288 topics/**/explore.png
+      run: convert topics/**/**.png -resize 288x288 topics/**/**.png
     - name: Add & Commit files
       run: |
         git config --local user.email "github-action[bot]@github.com"
         git config --local user.name "GitHub Action Bot"
         git add .
         git commit -m "Add changes" -a
-        git push -f -q https://${{ secrets.GITHUB_TOKEN }}@github.com/bdougie/bot-test-repo.git master    
+        git push -f -q https://${{ secrets.GITHUB_TOKEN }}@github.com/bdougie/bot-test-repo.git $GITHUB_REF    
