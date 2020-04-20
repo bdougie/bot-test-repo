@@ -1,9 +1,6 @@
 name: Resize images
 
 on: 
-  push:
-    paths:
-      - 'topics/**/**.png'
   pull_request:
     paths:
       - 'topics/**/**.png'
@@ -23,4 +20,4 @@ jobs:
         git config --local user.name "GitHub Action Bot"
         git add .
         git commit -m "Add changes" -a
-        git push -f -q https://${{ secrets.GITHUB_TOKEN }}@github.com/bdougie/bot-test-repo.git
+        git push -f -q https://${{ secrets.GITHUB_TOKEN }}@github.com/bdougie/bot-test-repo.git $GITHUB_HEAD_REF    
