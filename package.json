@@ -1,27 +1,25 @@
 {
-  "name": "now-test",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-scripts": "2.0.5",
-    "standard": "^14.3.1"
-  },
+  "name": "gh-action-data-scraping",
+  "version": "1.0.0",
+  "description": "this shows how to use github actions to do automated data scraping",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "lint": "standard --fix",
-    "eject": "react-scripts eject"
+    "action": "node ./action.js"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sw-yx/gh-action-data-scraping.git"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "keywords": [
+    "actions"
+  ],
+  "author": "sw-yx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sw-yx/gh-action-data-scraping/issues"
+  },
+  "homepage": "https://github.com/sw-yx/gh-action-data-scraping#readme",
+  "dependencies": {
+    "random-user": "^2.0.2"
+  }
 }
