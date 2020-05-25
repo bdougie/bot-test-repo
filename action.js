@@ -8,7 +8,7 @@ const github = require('@actions/github');
 const context = github.context;
 const repository = context.repository;
 
-console.log(octokit.issues.listForRepo(repository.owner.login, repository.name));
+console.log(github.issues.listForRepo(repository.owner.login, repository.name));
 
 // context.repository.full_name
 
