@@ -15,6 +15,8 @@ jobs:
       run: npm install
     - name: Scrape
       uses: notBdougie/issues-to-data@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
     - uses: mikeal/publish-to-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub sets this for you
