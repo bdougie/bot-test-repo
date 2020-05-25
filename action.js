@@ -6,8 +6,11 @@ const randomUser = require('random-user');
 
 const github = require('@actions/github');
 const context = github.context;
+const repository = context.repository;
 
-console.log(context);
+console.log(octokit.issues.listForRepo(repository.owner.login, repository.name));
+
+// context.repository.full_name
 
 // for you to change easily
 const dataFolder = '/data';
