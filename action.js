@@ -7,8 +7,11 @@ const randomUser = require('random-user');
 const github = require('@actions/github');
 const context = github.context;
 const repository = context.repository;
+const myToken = core.getInput('GITHUB_TOKEN');
 
-console.log(github.issues.listForRepo(repository.owner.login, repository.name));
+const octokit = new github.GitHub(myToken);
+
+console.log(octokit.issues.listForRepo(repository.owner.login, repository.name));
 
 // context.repository.full_name
 
