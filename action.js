@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const randomUser = require('random-user');
+const core = require('@actions/core')
 
 const github = require('@actions/github');
 const context = github.context;
