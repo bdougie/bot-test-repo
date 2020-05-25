@@ -14,7 +14,7 @@ jobs:
     - name: Build
       run: npm install
     - name: Scrape
-      uses: bdougie/data-issue-handler@master
+      uses: bdougie/gh-action-data-scraping@master
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
     - uses: mikeal/publish-to-github-action@master
