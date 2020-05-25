@@ -4,6 +4,11 @@ const fs = require('fs');
 const path = require('path');
 const randomUser = require('random-user');
 
+const github = require('@actions/github');
+const context = github.context;
+
+console.log(context);
+
 // for you to change easily
 const dataFolder = '/data';
 const now = new Date();
