@@ -7,5 +7,6 @@ jobs:
   one:
     runs-on: ubuntu-latest
     steps:
+      - run: echo $GITHUB_EVENT_PATH
       - name: take an issue
         uses: bdougie/take-action@main
