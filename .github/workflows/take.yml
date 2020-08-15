@@ -7,6 +7,6 @@ jobs:
   one:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ github.event }}"
+      - run: echo github.event
       - name: take an issue
         uses: bdougie/take-action@main
