@@ -10,6 +10,7 @@ jobs:
     
     steps:
       - uses: actions/github-script@v3
+        id: first
         name: Script to find linked issues
         with:
           script: |
@@ -33,6 +34,6 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '👋 Thanks for reporting!'
+              body: `👋 Thanks for reporting! ${steps.first.outputs.result}`
             })
         
