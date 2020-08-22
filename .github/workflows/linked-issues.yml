@@ -11,17 +11,9 @@ jobs:
     steps:
       - uses: actions/github-script@v3
         name: Not an Action
-        if: github.event.label.name == 'nocode' || github.event.label.name == 'not-an-action'
         with:
           script: |
-            await github.issues.createComment({
-              owner: "github-hackathon",
-              repo: "hackathon",
-              issue_number: context.payload.number,
-              body: "Submission is not a usable GitHub Action"
-            });
-            
-            const response = await octokit.issues.listEventsForTimeline({issue_number: 689, owner: "open-sauced", repo: "open-sauced"});
+            const response = await github.issues.listEventsForTimeline({issue_number: 689, owner: "open-sauced", repo: "open-sauced"});
 
             let fin = [];
             const filteredResp = response.data.filter((d) => {
