@@ -1,16 +1,16 @@
-name: Review with labels
+name: Take care of linked issues
 
 on:
   issue_comment:
     types: [created, edited]
 
 jobs:
-  build:
+  linked-issues:
     runs-on: ubuntu-latest
     
     steps:
       - uses: actions/github-script@v3
-        name: Not an Action
+        name: Script to find linked issues
         with:
           script: |
             const response = await github.issues.listEventsForTimeline({issue_number: 689, owner: "open-sauced", repo: "open-sauced"});
