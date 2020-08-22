@@ -25,6 +25,7 @@ jobs:
             })
 
             return fin;
+      - run: echo "${{steps.first.outputs.result}}"
       - uses: actions/github-script@v3
         name: label pull requests
         with:
