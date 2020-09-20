@@ -1,4 +1,4 @@
-name: Assign
+name: Take Action
 on:
   issue_comment:
     types: [created, edited]
