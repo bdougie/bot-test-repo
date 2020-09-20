@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
+          string="My long string"
           if [[ "$(echo "$string")" == *"My long"* ]]; then
             echo "It's there!"
           fi
