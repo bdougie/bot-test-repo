@@ -5,7 +5,7 @@ on:
 
 jobs:
   take-issue:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name: take an issue
         uses: bdougie/take-action@main
