@@ -9,5 +9,5 @@ jobs:
     steps:
       - name: take an issue
         uses: bdougie/take-action@main
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.BDOUGIE_TOKEN }} 
