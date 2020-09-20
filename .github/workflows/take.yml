@@ -7,6 +7,8 @@ jobs:
   take-issue:
     runs-on: ubuntu-18.04
     steps:
+      - name: Docker setup
+        uses: docker://alpine:3.8
       - name: take an issue
         uses: bdougie/take-action@main
         env:
