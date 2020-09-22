@@ -7,10 +7,5 @@ jobs:
   take-issue:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          string="My long string"
-          if [[ "$(echo "$string")" == *"My long"* ]]; then
-            echo "It's there!"
-          fi
       - name: take an issue
         uses: bdougie/take--action@debug
