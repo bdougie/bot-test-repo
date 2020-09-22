@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: take an issue
-        uses: bdougie/take--action@debug
+        uses: crazy-max/take-action@main
