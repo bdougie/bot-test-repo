@@ -1,40 +1,40 @@
-name: Take care of linked issues
+# name: Take care of linked issues
 
-on:
-  issue_comment:
-    types: [created, edited]
+# on:
+#   issue_comment:
+#     types: [created, edited]
 
-jobs:
-  linked-issues:
-    runs-on: ubuntu-latest
+# jobs:
+#   linked-issues:
+#     runs-on: ubuntu-latest
     
-    steps:
-      - uses: actions/github-script@v3
-        id: first
-        name: Script to find linked issues
-        with:
-          script: |
-            const response = await github.issues.listEventsForTimeline({issue_number: 689, owner: "open-sauced", repo: "open-sauced"});
+#     steps:
+#       - uses: actions/github-script@v3
+#         id: first
+#         name: Script to find linked issues
+#         with:
+#           script: |
+#             const response = await github.issues.listEventsForTimeline({issue_number: 689, owner: "open-sauced", repo: "open-sauced"});
 
-            let fin = [];
-            const filteredResp = response.data.filter((d) => {
-                return d.event === "cross-referenced"
-            }).reduce((res, x) => {
-                // console.log(x)
-                return fin.push(x.source.issue.number);
-            })
+#             let fin = [];
+#             const filteredResp = response.data.filter((d) => {
+#                 return d.event === "cross-referenced"
+#             }).reduce((res, x) => {
+#                 // console.log(x)
+#                 return fin.push(x.source.issue.number);
+#             })
 
-            return fin;
-      - run: echo "${{steps.first.outputs.result}}"
-      - uses: actions/github-script@v3
-        name: label pull requests
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            github.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: `👋 Thanks for reporting! ${steps.first.outputs.result}`
-            })
+#             return fin;
+#       - run: echo "${{steps.first.outputs.result}}"
+#       - uses: actions/github-script@v3
+#         name: label pull requests
+#         with:
+#           github-token: ${{secrets.GITHUB_TOKEN}}
+#           script: |
+#             github.issues.createComment({
+#               issue_number: context.issue.number,
+#               owner: context.repo.owner,
+#               repo: context.repo.repo,
+#               body: `👋 Thanks for reporting! ${steps.first.outputs.result}`
+#             })
         
