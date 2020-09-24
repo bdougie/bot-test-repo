@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: take an issue
-        uses: crazy-max/take-action@main
+        uses: bdougie/take-action@debug
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
