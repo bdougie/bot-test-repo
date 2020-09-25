@@ -32,7 +32,7 @@ jobs:
               issue_number: fin[0],
               owner: "open-sauced",
               repo: "open-sauced",
-              body: `👋 Thanks for link! ${steps.first.outputs.result[0]}`
+              body: `👋 Thanks for link!`
             })
         
 #       - run: Label the PR
