@@ -14,7 +14,7 @@ jobs:
         name: Script to find linked issues
         with:
           script: |
-            const response = await github.issues.listEventsForTimeline({issue_number: 689, owner: "open-sauced", repo: "open-sauced"});
+            const response = await github.issues.listEventsForTimeline({issue_number: 823, owner: "open-sauced", repo: "open-sauced"});
 
             let fin = [];
             const filteredResp = response.data.filter((d) => {
