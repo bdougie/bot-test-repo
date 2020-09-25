@@ -22,21 +22,21 @@ jobs:
             }).reduce((res, x) => {
                 // console.log(x)
                 return fin.push(x.source.issue.number);
-            })
+            }, [])
             
             console.log(fin);
 
             return fin;
-#       - run: echo "${{steps.first.outputs.result}}"
-#       - uses: actions/github-script@v3
-#         name: label pull requests
-#         with:
-#           github-token: ${{secrets.GITHUB_TOKEN}}
-#           script: |
-#             github.issues.createComment({
-#               issue_number: context.issue.number,
-#               owner: context.repo.owner,
-#               repo: context.repo.repo,
+      - run: echo "${{steps.first.outputs.result}}"
+      - uses: actions/github-script@v3
+        name: label pull requests
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
 #               body: `👋 Thanks for reporting! ${steps.first.outputs.result}`
 #             })
         
