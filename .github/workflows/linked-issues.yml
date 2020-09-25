@@ -12,7 +12,7 @@ jobs:
         id: first
         name: Script to find linked issues
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}:  
+          github-token: ${{secrets.GITHUB_TOKEN}} 
           script: |
             const response = await github.issues.listEventsForTimeline({issue_number: 689, owner: "open-sauced", repo: "open-sauced"});
 
