@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - if: github.actor != "dependabot[bot]"
     - run: echo $GITHUB_HEAD_REF
     - name: Image Resizer to 288x288
       run: convert topics/**/**.png -resize 288x288 topics/**/**.png
     - name: Add & Commit files
+      if: github.actor != "dependabot[bot]"
       run: |
         git checkout $GITHUB_HEAD_REF
 
