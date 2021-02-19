@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Dump context
-        if: github.actor != "dependabot[bot]"
+        if: github.actor != 'dependabot[bot]'
         uses: crazy-max/ghaction-dump-context@v1
