@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - if: github.actor == "dependabot[bot]"
+    - if: github.actor != "dependabot[bot]"
     - run: echo $GITHUB_HEAD_REF
     - name: Image Resizer to 288x288
       run: convert topics/**/**.png -resize 288x288 topics/**/**.png
