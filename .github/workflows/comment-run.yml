@@ -7,7 +7,7 @@ jobs:
   comment-run:
     runs-on: ubuntu-18.04
     steps:
-    - uses: bdougie/gipht-action@main
-    - run: echo |
-        Hello FLoridaJS
-
+      - uses: bdougie/gipht-action@main
+        env:
+          GIPHY_TOKEN: ${{ secrets.GIPHY_TOKEN }} // generate at https://developers.giphy.com/
+          GITHUB_TOKEN: ${{ secrets.BDOUGIE_TOKEN }} // must be generate and provide access to the repo's issue. 
