@@ -12,7 +12,7 @@ const { webkit } = require('playwright');
     const page = await browser.newPage();
 
     // playwright visit
-    await page.goto('https://skyline.github.com/');
+    await page.goto('http://whatsmyuseragent.org/');
     await page.screenshot({ path: `./playwright/images/${browserType.name()}.png` });
     
     // Cloose the browser
