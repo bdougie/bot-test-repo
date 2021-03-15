@@ -13,7 +13,7 @@ const { webkit } = require('playwright');
 
     // playwright visit
     await page.goto('http://whatsmyuseragent.org/');
-    await page.screenshot({ path: `./playwright/images/${browserType.name()}.png` });
+    await page.screenshot({ path: `example.png` });
     
     // Cloose the browser
     await browser.close();
