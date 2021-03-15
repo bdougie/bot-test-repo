@@ -1,9 +1,22 @@
 const { webkit } = require('playwright');
 
 (async () => {
-  const browser = await webkit.launch();
-  const page = await browser.newPage();
-  await page.goto('http://whatsmyuseragent.org/');
-  await page.screenshot({ path: `./playwright/images/example.png` });
-  await browser.close();
+  const { chromium, webkit, firefox } = playwright;
+  
+  for (const browserType of [chromium, webkit, firefox]) {
+    // launch browser
+    const browser = await browserType.launch();
+    // create a context
+    const context = await browser.newContext();
+    // create a page
+    const page = await browser.newPage();
+
+    // playwright visit
+    await page.goto('https://skyline.github.com/');
+    await page.screenshot({ path: `output/${browserType.name()}.png` });
+    
+    // Cloose the browser
+    await browser.close();
+  }
+  
 })();
