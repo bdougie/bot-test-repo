@@ -7,10 +7,6 @@
     "action": "node ./action.js",
     "test": "node ./playwright/index.js",
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sw-yx/gh-action-data-scraping.git"
-  },
   "keywords": [
     "actions"
   ],
