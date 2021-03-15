@@ -27,5 +27,5 @@ jobs:
       - uses: actions/upload-artifact@v2
         if: ${{ always() }}
         with:
-          name: test-artifacts
-          path: ./playwright/images
+          name: e2e-browser-images
+          path: ./playwright/images/
