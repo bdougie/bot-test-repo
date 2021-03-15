@@ -13,7 +13,7 @@ const { webkit } = require('playwright');
 
     // playwright visit
     await page.goto('https://skyline.github.com/');
-    await page.screenshot({ path: `output/${browserType.name()}.png` });
+    await page.screenshot({ path: `${browserType.name()}.png` });
     
     // Cloose the browser
     await browser.close();
