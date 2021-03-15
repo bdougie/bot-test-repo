@@ -29,5 +29,5 @@ jobs:
       - uses: actions/upload-artifact@v2
         if: ${{ always() }}
         with:
-      name: test-artifacts
-      path: path/to/artifacts
+          name: test-artifacts
+          path: path/to/artifacts
