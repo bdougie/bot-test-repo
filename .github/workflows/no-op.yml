@@ -59,6 +59,27 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+ 
+  deploy-storybook:
+    needs: [test-site]
+    if: github.ref == 'refs/heads/main'
+
+    runs-on: ubuntu-latest
+    environment: 
+      name: production
+      url: http://www.design.github.com
+
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
     
   deploy-production:
     needs: [test-site]
