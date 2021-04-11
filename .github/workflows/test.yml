@@ -1,12 +1,12 @@
-# name: dump
+name: dump
 
-# on:
-#   pull_request:
+on:
+  pull_request_target:
 
-# jobs:
-#   dump:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Dump context
-#         if: github.actor == 'dependabot[bot]'
-#         uses: crazy-max/ghaction-dump-context@v1
+jobs:
+  dump:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump context
+        if: github.actor == 'dependabot[bot]'
+        uses: crazy-max/ghaction-dump-context@v1
