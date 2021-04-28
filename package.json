@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "action": "node ./action.js",
-    "test": "node ./playwright/index.js"
+    "test": "node ./playwright/index.js",
+    "release": "standard-version --tag-prefix="
   },
   "license": "MIT",
   "bugs": {
