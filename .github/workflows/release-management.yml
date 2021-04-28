@@ -31,3 +31,4 @@ jobs:
           npm install
       - name: Release
         run: npm run release
+      - run: git push --follow-tags origin main
