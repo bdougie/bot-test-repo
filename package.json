@@ -18,5 +18,8 @@
     "@actions/github": "^2.2.0",
     "playwright": "^1.9.2",
     "random-user": "^2.0.2"
+  },
+  "devDependencies": {
+    "standard-version": "^9.2.0"
   }
 }
