@@ -10,4 +10,4 @@ jobs:
       - uses: bdougie/gipht-action@main
         env:
           GIPHY_TOKEN: ${{ secrets.GIPHY_TOKEN }} // generate at https://developers.giphy.com/
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} // must be generate and provide access to the repo's issue.
+          GITHUB_TOKEN: ${{ secrets.BDOUGIE_TOKEN }} // must be generate and provide access to the repo's issue.
