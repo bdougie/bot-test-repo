@@ -8,4 +8,4 @@ jobs:
     steps:
       - uses: bdougie/leveuptutorials-action@main
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
+          github_token: ${{ github.token }}
