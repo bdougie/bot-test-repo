@@ -9,4 +9,5 @@ jobs:
     steps:
       - uses: bdougie/gipht-action@main
         env:
-          GIPHY_TOKEN: ${{ secrets.GIPHY_TOKEN }} // generate at https://developers.giphy.com/
+          GIPHY_TOKEN: ${{ secrets.GIPHY_TOKEN }}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN }}
