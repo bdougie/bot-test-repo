@@ -7,5 +7,3 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: bdougie/leveuptutorials-action@main
-        with:
-          github_token: ${{ github.token }}
