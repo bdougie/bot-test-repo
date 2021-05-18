@@ -22,6 +22,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
+      - name: Dump context
+        uses: crazy-max/ghaction-dump-context@v1
       - name: set git user
         run: |
           git config --global user.name ${GITHUB_ACTOR}
