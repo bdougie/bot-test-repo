@@ -6,7 +6,7 @@
   "scripts": {
     "action": "node ./action.js",
     "test": "node ./playwright/index.js",
-    "release": "standard-version --tag-prefix="
+    "release": "standard-version --skip tag"
   },
   "license": "MIT",
   "bugs": {
