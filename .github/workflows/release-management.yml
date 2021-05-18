@@ -35,7 +35,8 @@ jobs:
           npm install
       - name: Release
         run: |
+          github checkout main
           npm run release
-      - uses: mikeal/publish-to-github-action@master
+          git push origin main
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.BDOUGIE_TOKEN }}
