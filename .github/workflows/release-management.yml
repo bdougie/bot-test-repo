@@ -34,7 +34,11 @@ jobs:
         run: |
           npm install
       - name: Release
-        run: npm run release
-      - run: git push --follow-tags origin main
+        run: |
+          npm run release
+          git push --tags origin main
+      - run: |
+          git push --delete origin ${{ github.context.ref }}
+          git push --tags origin main
         env:
           GITHUB_TOKEN: ${{ secrets.BDOUGIE_TOKEN }}
