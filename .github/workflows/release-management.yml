@@ -36,9 +36,6 @@ jobs:
       - name: Release
         run: |
           npm run release
-          git push --tags origin HEAD
-      - run: |
-          git push --delete origin ${{ github.context.ref }}
-          git push --tags origin main
+          git push --follow-tags origin HEAD
         env:
           GITHUB_TOKEN: ${{ secrets.BDOUGIE_TOKEN }}
