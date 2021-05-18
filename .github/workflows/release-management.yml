@@ -35,7 +35,6 @@ jobs:
           npm install
       - name: Release
         run: |
-          github checkout main
           npm run release
           git push origin main
         env:
