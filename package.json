@@ -1,6 +1,6 @@
 {
   "name": "gh-action-data-scraping",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "this shows how to use github actions to do automated data scraping",
   "main": "index.js",
   "scripts": {
