@@ -32,6 +32,7 @@ Welcome! My name is Du'An Lightfoot. I'm a [Developer Advocate](https://blogs.ci
 ---
 
 ### 📺 Latest YouTube Videos
+<!-- YOUTUBE:START --> one <!-- YOUTUBE:END -->
 <!-- YOUTUBE:START -->
 - [My Huge Cisco Live 2021 Announcement](https://www.youtube.com/watch?v=OhqS62TjFic)
 - [Cyber Security Tech Round Table Talk](https://www.youtube.com/watch?v=KUM1DpENurs)
