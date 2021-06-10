@@ -33,18 +33,7 @@ Welcome! My name is Du'An Lightfoot. I'm a [Developer Advocate](https://blogs.ci
 
 ### 📺 Latest YouTube Videos
 <!-- YOUTUBE:START -->
-- [My Huge Cisco Live 2021 Announcement](https://www.youtube.com/watch?v=OhqS62TjFic)
-- [Cyber Security Tech Round Table Talk](https://www.youtube.com/watch?v=KUM1DpENurs)
-- [How to Make Money While You Sleep With Affiliate Marketing | Interview with Priest Willis](https://www.youtube.com/watch?v=rv_AFZRBCtA)
-- [From Appliance Repair to Assistant Vice President of Network Operations Interview with Jarrett Todd](https://www.youtube.com/watch?v=LK32E9V9nVs)
 <!-- YOUTUBE:END -->
-<!-- YOUTUBE:START -->
-- [My Huge Cisco Live 2021 Announcement](https://www.youtube.com/watch?v=OhqS62TjFic)
-- [Cyber Security Tech Round Table Talk](https://www.youtube.com/watch?v=KUM1DpENurs)
-- [How to Make Money While You Sleep With Affiliate Marketing | Interview with Priest Willis](https://www.youtube.com/watch?v=rv_AFZRBCtA)
-- [From Appliance Repair to Assistant Vice President of Network Operations Interview with Jarrett Todd](https://www.youtube.com/watch?v=LK32E9V9nVs)
-<!-- YOUTUBE:END -->
-
 ---
 
 <br />
