@@ -1,24 +1,15 @@
-# This is a basic workflow to help you get started with Actions
+name: Pull request labeler
 
-name: Setup
+on: [ pull_request_target ]
 
-# Controls when the action will run. 
-on:
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+permissions:
+  contents: read
+  pull-requests: write
 
 jobs:
-  setup:
+  triage:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "setup"
-  build:
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "build"
-  test:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "test"
+      - uses: actions/labeler@v2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
