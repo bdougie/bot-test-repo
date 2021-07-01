@@ -7,3 +7,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - runs: node action/index.js
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
