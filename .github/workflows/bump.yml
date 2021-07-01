@@ -1,0 +1,13 @@
+name: Bump the version
+
+on: [ pull_request_target ]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - runs: node action/index.js
