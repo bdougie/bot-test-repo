@@ -1,3 +1,3 @@
-# Add 'repo' label to any root file changes
-question:
+# Add 'available' label to any root file changes
+available:
 - '*'
