@@ -11,6 +11,6 @@ jobs:
   triage:
     runs-on: ubuntu-latest
     steps:
-      - runs: node action/index.js
+      - uses: actions/labeler@v2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
