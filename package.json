@@ -1,25 +1,20 @@
 {
-  "name": "gh-action-data-scraping",
-  "version": "0.2.11",
-  "description": "this shows how to use github actions to do automated data scraping",
+  "name": "bot-test-repo",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "action": "node ./action.js",
-    "test": "node ./playwright/index.js",
-    "release": "standard-version --git-tag-fallback"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bdougie/bot-test-repo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sw-yx/gh-action-data-scraping/issues"
+    "url": "https://github.com/bdougie/bot-test-repo/issues"
   },
-  "homepage": "https://github.com/sw-yx/gh-action-data-scraping#readme",
-  "dependencies": {
-    "@actions/core": "^1.2.4",
-    "@actions/github": "^2.2.0",
-    "playwright": "^1.9.2",
-    "random-user": "^2.0.2"
-  },
-  "devDependencies": {
-    "standard-version": "^9.2.0"
-  }
+  "homepage": "https://github.com/bdougie/bot-test-repo#readme"
 }
