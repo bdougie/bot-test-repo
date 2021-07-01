@@ -1,10 +1,6 @@
 name: Bump the version
 
-on: [ pull_request_target ]
-
-permissions:
-  contents: read
-  pull-requests: write
+on: [ pull_request ]
 
 jobs:
   triage:
