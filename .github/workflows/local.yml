@@ -1,6 +1,7 @@
 name: Run a local file
 on:
   pull_request:
+    branches: [main]
   workflow_dispatch:
     inputs: 
       type:
@@ -8,7 +9,7 @@ on:
         required: true
         default: 'patch'
 jobs:
-  boop:
+  bump:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
