@@ -27,9 +27,10 @@ jobs:
           git config user.email noreply@github.com
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
       - name: Commit and push changes
-        run: |
-          git add .
-          if output=$(git status --porcelain) && [ ! -z "$output" ]; then
-            git commit --author "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>" --message "update the goals cache"
-            git push -u origin ${GITHUB_HEAD_REF} -f
-          fi
+        uses: devops-infra/action-commit-push@master
+        with:
+          github_token: "${{ secrets.GITHUB_TOKEN }}"
+          add_timestamp: true
+          commit_prefix: "[AUTO]"
+          commit_message: "Automatic commit"
+          target_branch: "${{ secrets.GITHUB_HEAD_REF }}"
