@@ -19,11 +19,11 @@ jobs:
         id: bumpVersion
         with:
           script: |
-            // const packageJson = require("./package.json");
+            const packageJson = require("./package.json");
             // const fs = require("fs");
 
             // bump the version in the package.json
-            let [major, minor, patch] = version.split('.');
+            let [major, minor, patch] = packageJson.version.split('.');
 
             // leverage a case statment to bump the version base option.type
             switch (options.type) {
