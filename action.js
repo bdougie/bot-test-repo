@@ -38,5 +38,3 @@ console.log(bumpVersion(packageJson.version, { type: type }));
 // test minor bumpVersion
 // console.log(bumpVersion(packageJson.version, { type: 'minor' }));
 
-// test patch bumpVersion
-// console.log(bumpVersion(packageJson.version, { type: 'patch' })); 
