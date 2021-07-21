@@ -6,6 +6,7 @@ on:
         description: 'major, minor, or patch?'     
         required: true
         default: 'patch'
+  pull_request:
 jobs:
   boop:
     runs-on: ubuntu-latest
