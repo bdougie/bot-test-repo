@@ -31,5 +31,5 @@ jobs:
           git add .
           if output=$(git status --porcelain) && [ ! -z "$output" ]; then
             git commit --author "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>" --message "update the goals cache"
-            git push -u origin ${GITHUB_HEAD_REF} -f
+            git push -u origin ${GITHUB_REF#*refs/heads/} -f
           fi
