@@ -1,7 +1,9 @@
 const packageJson = require('./package.json');
+const core = require("@actions/core");
+const type = core.getInput("type")
 
 // bump the version in the package.json
-module.exports = function bumpVersion(version, options = {}) {
+function bumpVersion(version, options = {}) {
   let [major, minor, patch] = version.split('.');
 
   // leverage a case statment to bump the version base option.type
@@ -24,11 +26,13 @@ module.exports = function bumpVersion(version, options = {}) {
 
   const newVersion = [major, minor, patch].join('.');
   packageJson.version = newVersion;
+
+  fs.writeFileSync("package.json", JSON.stringify(packageJson, null, 2));
   return newVersion;
 }
 
 // test major bumpVersion
-// console.log(bumpVersion(packageJson.version, { type: 'major' }));
+console.log(bumpVersion(packageJson.version, { type }));
 
 // test minor bumpVersion
 // console.log(bumpVersion(packageJson.version, { type: 'minor' }));
