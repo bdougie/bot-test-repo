@@ -1,6 +1,7 @@
 const packageJson = require('./package.json');
+const fs = require("fs");
 const core = require("@actions/core");
-const type = core.getInput("type")
+const type = core.getInput("type") || "patch"
 
 // bump the version in the package.json
 function bumpVersion(version, options = {}) {
@@ -32,7 +33,7 @@ function bumpVersion(version, options = {}) {
 }
 
 // test major bumpVersion
-console.log(bumpVersion(packageJson.version, { type }));
+console.log(bumpVersion(packageJson.version, { type: type }));
 
 // test minor bumpVersion
 // console.log(bumpVersion(packageJson.version, { type: 'minor' }));
