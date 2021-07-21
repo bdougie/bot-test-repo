@@ -33,4 +33,4 @@ jobs:
           github_token: "${{ secrets.GITHUB_TOKEN }}"
           commit_prefix: "[AUTO]"
           commit_message: "Automatic commit"
-          target_branch: "${{ secrets.GITHUB_HEAD_REF }}"
+          target_branch: "${{ github.head_ref }}"
