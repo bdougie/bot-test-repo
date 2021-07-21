@@ -1,4 +1,4 @@
-const packageJson = require('../../package.json');
+const packageJson = require('./package.json');
 
 // bump the version in the package.json
 module.exports = function bumpVersion(version, options = {}) {
