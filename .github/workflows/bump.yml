@@ -6,16 +6,27 @@ jobs:
   triage:
     runs-on: ubuntu-latest
     steps:
-      - name: Comment on the PR
-        uses: actions/github-script@v3
+      - uses: actions/checkout@v2
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
+          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - run: npm install
+
+      - name: bump the verion
+        uses: actions/github-script@v4
+        id: bumpVersion
+        with:
           script: |
-            const packageJson = require('./package.json');
+            const packageJson = require("./package.json");
             const fs = require("fs");
 
             // bump the version in the package.json
-            let [major, minor, patch] = version.split('.');
+            let [major, minor, patch] = packageJson.version.split('.');
+            
+            // replace this with the label
+            let options = {type: "patch"}
 
             // leverage a case statment to bump the version base option.type
             switch (options.type) {
@@ -37,5 +48,19 @@ jobs:
 
             const newVersion = [major, minor, patch].join('.');
             packageJson.version = newVersion;
+            
+            return packageJson
 
             fs.writeFileSync("package.json", JSON.stringify(packageJson, null, 2));
+      - name: set git user
+        run: |
+            git config --global user.name ${GITHUB_ACTOR}
+            git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+            git add package.json
+            git commit -m 'bump package version'
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            branch: ${{ github.head_ref }}
+            force: true

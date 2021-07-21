@@ -31,12 +31,3 @@ function bumpVersion(version, options = {}) {
   fs.writeFileSync("package.json", JSON.stringify(packageJson, null, 2));
   return newVersion;
 }
-
-// test major bumpVersion
-console.log(bumpVersion(packageJson.version, { type: type }));
-
-// test minor bumpVersion
-// console.log(bumpVersion(packageJson.version, { type: 'minor' }));
-
-// test patch bumpVersion
-// console.log(bumpVersion(packageJson.version, { type: 'patch' })); 
