@@ -1,6 +1,6 @@
 {
   "name": "bot-test-repo",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,8 +16,5 @@
   "bugs": {
     "url": "https://github.com/bdougie/bot-test-repo/issues"
   },
-  "homepage": "https://github.com/bdougie/bot-test-repo#readme",
-  "dependencies": {
-    "@actions/core": "^1.4.0"
-  }
+  "homepage": "https://github.com/bdougie/bot-test-repo#readme"
 }
