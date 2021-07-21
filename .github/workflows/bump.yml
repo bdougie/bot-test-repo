@@ -14,13 +14,13 @@ jobs:
           node-version: 14
       - run: npm install
 
-      - name: Comment on the PR
-        uses: actions/github-script@v3
+      - name: bump the verion
+        uses: actions/github-script@v4
+        id: bumpVersion
         with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const packageJson = require('./package.json');
-            const fs = require("fs");
+            // const packageJson = require("./package.json");
+            // const fs = require("fs");
 
             // bump the version in the package.json
             let [major, minor, patch] = version.split('.');
@@ -45,17 +45,24 @@ jobs:
 
             const newVersion = [major, minor, patch].join('.');
             packageJson.version = newVersion;
+            
+            return packageJson
 
-            fs.writeFileSync("package.json", JSON.stringify(packageJson, null, 2));
-      - name: set git user
-        run: |
-            git config --global user.name ${GITHUB_ACTOR}
-            git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-            git add package.json
-            git commit -m 'bump package version'
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+            // fs.writeFileSync("package.json", JSON.stringify(packageJson, null, 2));
+      - uses: DamianReeves/write-file-action@v1.0
         with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            branch: ${{ github.head_ref }}
-            force: true
+          path: ./package.json
+          contents: ${{steps.bumpVersion.outputs.result}}
+          write-mode: overwrite
+#       - name: set git user
+#         run: |
+#             git config --global user.name ${GITHUB_ACTOR}
+#             git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+#             git add package.json
+#             git commit -m 'bump package version'
+#       - name: Push changes
+#         uses: ad-m/github-push-action@master
+#         with:
+#             github_token: ${{ secrets.GITHUB_TOKEN }}
+#             branch: ${{ github.head_ref }}
+#             force: true
