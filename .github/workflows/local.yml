@@ -1,6 +1,11 @@
 name: Run a local file
 on:
   workflow_dispatch:
+    inputs: 
+      type:
+        description: 'major, minor, or patch?'     
+        required: true
+        default: 'patch'
   pull_request:
 
 jobs:
