@@ -1,26 +1,26 @@
-name: Sign off commits in UI
+# name: Sign off commits in UI
 
-on:
-  pull_request:
-    paths:
-    - '*.md'
+# on:
+#   pull_request:
+#     paths:
+#     - '*.md'
 
-jobs:
-  sign-off-commit:
-    name: signing commit
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - name: Sign the last commit 
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        git checkout "${GITHUB_HEAD_REF}"
-        git config --global user.name ${GITHUB_ACTOR}
-        git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-        git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+# jobs:
+#   sign-off-commit:
+#     name: signing commit
+#     runs-on: ubuntu-latest
+#     steps:
+#     - uses: actions/checkout@master
+#     - name: Sign the last commit 
+#       env:
+#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#       run: |
+#         git checkout "${GITHUB_HEAD_REF}"
+#         git config --global user.name ${GITHUB_ACTOR}
+#         git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+#         git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
         
-        git add .
-        git commit --amend --no-edit --signoff
-        git push -u origin ${GITHUB_HEAD_REF} -f
+#         git add .
+#         git commit --amend --no-edit --signoff
+#         git push -u origin ${GITHUB_HEAD_REF} -f
         
