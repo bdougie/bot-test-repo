@@ -24,6 +24,9 @@ jobs:
 
             // bump the version in the package.json
             let [major, minor, patch] = packageJson.version.split('.');
+            
+            // replace this with the label
+            let options = {type: "patch"}
 
             // leverage a case statment to bump the version base option.type
             switch (options.type) {
