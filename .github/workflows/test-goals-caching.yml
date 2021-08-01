@@ -13,7 +13,7 @@ jobs:
       run: npm install
     - uses: open-sauced/actions/goals-caching@update-goals-caching
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN} }
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Set up Git
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
