@@ -1,20 +1,62 @@
-{
-  "name": "bot-test-repo",
-  "version": "2.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+[
+  {
+    "full_name": "octoherd/cli",
+    "stargazers_count": 74,
+    "open_issues_count": 10,
+    "forks_count": 2
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bdougie/bot-test-repo.git"
+  {
+    "full_name": "zernonia/supabase-realtime-nextconf-clone",
+    "stargazers_count": 20,
+    "open_issues_count": 0,
+    "forks_count": 1
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bdougie/bot-test-repo/issues"
+  {
+    "full_name": "Team-TAU/tau",
+    "stargazers_count": 47,
+    "open_issues_count": 17,
+    "forks_count": 17
   },
-  "homepage": "https://github.com/bdougie/bot-test-repo#readme"
-}
+  {
+    "full_name": "dotansimha/envelop",
+    "stargazers_count": 228,
+    "open_issues_count": 20,
+    "forks_count": 16
+  },
+  {
+    "full_name": "gr2m/boop-gregors-nose-test",
+    "stargazers_count": 2,
+    "open_issues_count": 0,
+    "forks_count": 2
+  },
+  {
+    "full_name": "open-sauced/slaybot",
+    "stargazers_count": 16,
+    "open_issues_count": 8,
+    "forks_count": 2
+  },
+  {
+    "full_name": "nodejs/node",
+    "stargazers_count": 80743,
+    "open_issues_count": 1439,
+    "forks_count": 20874
+  },
+  {
+    "full_name": "cli/cli",
+    "stargazers_count": 24208,
+    "open_issues_count": 382,
+    "forks_count": 2581
+  },
+  {
+    "full_name": "OneGraph/onegraph-client",
+    "stargazers_count": 20,
+    "open_issues_count": 20,
+    "forks_count": 6
+  },
+  {
+    "full_name": "primer/components",
+    "stargazers_count": 1270,
+    "open_issues_count": 65,
+    "forks_count": 181
+  }
+]
