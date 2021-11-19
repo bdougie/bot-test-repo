@@ -12,10 +12,10 @@ jobs:
         run: echo "$GITHUB_CONTEXT"
       - uses: actions/github-script@v5
         with:
-          script: |
-            // github.rest.issues.deleteComment({issues_id: context.issue.id, comment_id: event.comment.id})
-            
+          script: |            
             if (event.comment.body === ".party") {
+              github.rest.issues.deleteComment({issues_id: context.issue.id, comment_id: event.comment.id})
+
               github.rest.issues.createComment({
                 issue_number: context.issue.number,
                 owner: context.repo.owner,
