@@ -6,3 +6,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello is this thing on?"
+      - uses: actions/github-script@v5
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '👋 Click to go live! party.opensauced.pizza!'
+            })
