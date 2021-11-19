@@ -17,7 +17,11 @@ jobs:
             console.log("CONTEXT:", JSON.stringify(context))
 
             if (context.payload.comment.body === ".party") {
-              github.rest.issues.deleteComment({issues_id: context.issue.id, comment_id: context.payload.comment.id})
+              github.rest.issues.deleteComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: context.payload.comment.id
+              })
 
               github.rest.issues.createComment({
                 issue_number: context.issue.number,
