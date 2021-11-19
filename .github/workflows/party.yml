@@ -13,8 +13,8 @@ jobs:
       - uses: actions/github-script@v5
         with:
           script: |            
-            if (context.event.comment.body === ".party") {
-              github.rest.issues.deleteComment({issues_id: context.issue.id, comment_id: context.event.comment.id})
+            if (github.event.comment.body === ".party") {
+              github.rest.issues.deleteComment({issues_id: context.issue.id, comment_id: github.event.comment.id})
 
               github.rest.issues.createComment({
                 issue_number: context.issue.number,
