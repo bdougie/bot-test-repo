@@ -14,7 +14,7 @@ jobs:
         with:
           github-token: ${{ secrets.BDOUGIE_TOKEN }}
           script: |    
-            console.log("CONTEXT:", JSON.stringify(context))
+            // console.log("CONTEXT:", JSON.stringify(context))
 
             if (context.payload.comment.body === ".party") {
               github.rest.issues.deleteComment({
