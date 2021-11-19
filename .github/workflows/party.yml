@@ -12,6 +12,7 @@ jobs:
         run: echo "$GITHUB_CONTEXT"
       - uses: actions/github-script@v5
         with:
+          github-token: ${{ secrets.BDOUGIE_TOKEN }}
           script: |    
             console.log("CONTEXT:", JSON.stringify(context))
 
