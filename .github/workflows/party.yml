@@ -10,13 +10,11 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJSON(github) }}
         run: echo "$GITHUB_CONTEXT"
-      - name: Dump context context
-        env:
-          CONTEXT_CONTEXT: ${{ toJSON(context) }}
-        run: echo "$CONTEXT_CONTEXT"
       - uses: actions/github-script@v5
         with:
-          script: |            
+          script: |    
+            console.log("CONTEXT:", context)
+
             if (github.event.comment.body === ".party") {
               github.rest.issues.deleteComment({issues_id: context.issue.id, comment_id: github.event.comment.id})
 
