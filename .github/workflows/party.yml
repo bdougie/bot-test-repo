@@ -6,12 +6,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello is this thing on?"
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJSON(github) }}
+        run: echo "$GITHUB_CONTEXT"
       - uses: actions/github-script@v5
         with:
           script: |
-            // github.rest.issues.deleteComment){})
+            // github.rest.issues.deleteComment({issues_id: context.issue.id, comment_id: context.issue_comment.id})
             
-            if (context.issue === ".party") {
+            if (context.issue.body === ".party") {
               github.rest.issues.createComment({
                 issue_number: context.issue.number,
                 owner: context.repo.owner,
