@@ -9,10 +9,11 @@ jobs:
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJSON(github) }}
+        run: echo "$GITHUB_CONTEXT"
       - name: Dump context context
         env:
-          GITHUB_CONTEXT: ${{ toJSON(context) }}
-        run: echo "$GITHUB_CONTEXT"
+          CONTEXT_CONTEXT: ${{ toJSON(context) }}
+        run: echo "$CONTEXT_CONTEXT"
       - uses: actions/github-script@v5
         with:
           script: |            
