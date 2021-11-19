@@ -1,3 +1,4 @@
+name: Party NOW!
 on: issue_comment
 
 jobs:
