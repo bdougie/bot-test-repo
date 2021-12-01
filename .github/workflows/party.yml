@@ -15,18 +15,21 @@ jobs:
           github-token: ${{ secrets.BDOUGIE_TOKEN }}
           script: |    
             console.log("CONTEXT:", JSON.stringify(context))
+            try {
+              if (context.payload.comment.body === ".party") {
+                github.rest.issues.deleteComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  comment_id: context.payload.comment.id
+                })
 
-            if (context.payload.comment.body.includes(".party")) {
-              github.rest.issues.deleteComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                comment_id: context.payload.comment.id
-              })
-
-              github.rest.issues.createComment({
-                issue_number: context.issue.number,
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                body: '👋 Click to go live! [party.opensauced.pizza](https://party.opensauced.pizza)!'
-              })
+                github.rest.issues.createComment({
+                  issue_number: context.issue.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  body: '👋 Click to go live! [party.opensauced.pizza](https://party.opensauced.pizza)!'
+                })
+              }
+            } catch(e) {
+              console.log("ERRRRRROOOOORRRRRR", e)
             }
