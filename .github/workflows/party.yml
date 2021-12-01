@@ -17,7 +17,7 @@ jobs:
         with:
           github-token: ${{ secrets.BDOUGIE_TOKEN }}
           script: |    
-            console.log("CONTEXT:", JSON.stringify(context))
+            console.log("BODY:", context.payload.comment.body)
               //if (context.payload.comment.body !== ".party") {
                 //console.log("GOT EMMMMMM")
               //}
