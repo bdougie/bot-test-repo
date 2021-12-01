@@ -1,31 +1,31 @@
-name: "Playwright Tests"
-on:
-  workflow_dispatch:
-  push:
-    branches:
-    - main
+# name: "Playwright Tests"
+# on:
+#   workflow_dispatch:
+#   push:
+#     branches:
+#     - main
 
-jobs:
-  e2e-tests:
-    runs-on: ubuntu-latest # or macos-latest, windows-latest
+# jobs:
+#   e2e-tests:
+#     runs-on: ubuntu-latest # or macos-latest, windows-latest
 
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+#     steps:
+#       - uses: actions/checkout@v2
+#       - uses: actions/cache@v2
+#         with:
+#           path: ~/.npm
+#           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+#           restore-keys: |
+#             ${{ runner.os }}-node-
 
-      - uses: actions/setup-node@v1
+#       - uses: actions/setup-node@v1
 
-      - uses: microsoft/playwright-github-action@v1
+#       - uses: microsoft/playwright-github-action@v1
 
-      - name: Install dependencies and run tests
-        run: npm install && npm test
-      - uses: actions/upload-artifact@v2
-        if: ${{ always() }}
-        with:
-          name: e2e-browser-images
-          path: ./playwright/images/
+#       - name: Install dependencies and run tests
+#         run: npm install && npm test
+#       - uses: actions/upload-artifact@v2
+#         if: ${{ always() }}
+#         with:
+#           name: e2e-browser-images
+#           path: ./playwright/images/
