@@ -1,7 +1,7 @@
 name: Party NOW!
 on: 
   issue_comment:
-    type: [created, edited]
+    types: [created, edited]
 
 
 jobs:
