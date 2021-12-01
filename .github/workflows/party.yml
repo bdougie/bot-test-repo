@@ -1,5 +1,8 @@
 name: Party NOW!
-on: issue_comment
+on: 
+  issue_comment:
+    type: [created, edited]
+
 
 jobs:
   party-line:
