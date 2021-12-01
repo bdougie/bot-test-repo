@@ -1,41 +1,41 @@
-name: Release Management
+# name: Release Management
 
-on:
-  push: 
-    branches: [main]
-  workflow_dispatch:
+# on:
+#   push: 
+#     branches: [main]
+#   workflow_dispatch:
 
-jobs:
-  bump:
-    runs-on: ubuntu-latest
+# jobs:
+#   bump:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v2
-      - name: Cache node modules
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-      - name: Use Node.js 12
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - name: Dump context
-        uses: crazy-max/ghaction-dump-context@v1
-      - name: set git user
-        run: |
-          git config --global user.name ${GITHUB_ACTOR}
-          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-        env:
-          GITHUB_TOKEN: ${{ secrets.BDOUGIE_TOKEN }}
-      - name: npm install and test
-        run: |
-          npm install
-      - name: Release
-        run: |
-          npm run release
-          git push --follow-tags origin main
-        env:
-          GITHUB_TOKEN: ${{ secrets.BDOUGIE_TOKEN }}
+#     steps:
+#       - uses: actions/checkout@v2
+#       - name: Cache node modules
+#         uses: actions/cache@v2
+#         with:
+#           path: node_modules
+#           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+#           restore-keys: |
+#             ${{ runner.os }}-node-
+#       - name: Use Node.js 12
+#         uses: actions/setup-node@v1
+#         with:
+#           node-version: 12
+#       - name: Dump context
+#         uses: crazy-max/ghaction-dump-context@v1
+#       - name: set git user
+#         run: |
+#           git config --global user.name ${GITHUB_ACTOR}
+#           git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.BDOUGIE_TOKEN }}
+#       - name: npm install and test
+#         run: |
+#           npm install
+#       - name: Release
+#         run: |
+#           npm run release
+#           git push --follow-tags origin main
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.BDOUGIE_TOKEN }}
