@@ -16,7 +16,7 @@ jobs:
           script: |    
             console.log("CONTEXT:", JSON.stringify(context))
 
-            if (context.payload.comment.body === ".party") {
+            if (context.payload.comment.body.includes(".party")) {
               github.rest.issues.deleteComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
