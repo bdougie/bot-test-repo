@@ -1,13 +1,13 @@
-name: "Gipht Me"
-on:
-  issue_comment:
-    types: [created]
+# name: "Gipht Me"
+# on:
+#   issue_comment:
+#     types: [created]
 
-jobs:
-  comment-run:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: bdougie/gipht-action@main
-        env:
-          GIPHY_TOKEN: ${{ secrets.GIPHY_TOKEN }}
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN }}
+# jobs:
+#   comment-run:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: bdougie/gipht-action@main
+#         env:
+#           GIPHY_TOKEN: ${{ secrets.GIPHY_TOKEN }}
+#           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN }}
