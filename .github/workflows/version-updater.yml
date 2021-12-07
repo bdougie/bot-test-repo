@@ -8,6 +8,6 @@ jobs:
   actions-tagger:
     runs-on: windows-latest
     steps:
-      - uses: Actions-R-Us/actions-tagger@v
+      - uses: Actions-R-Us/actions-tagger@v1
         with:
           publish_latest_tag: true
