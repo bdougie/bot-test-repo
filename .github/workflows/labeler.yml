@@ -1,0 +1,13 @@
+name: catsup
+on:
+  issues:
+    types:
+      - labeled
+
+jobs:
+  sayHelloWorld:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: bdougie/catsup-appn@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
